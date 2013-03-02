@@ -17,7 +17,7 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
-//= require backbone/snickernet
+//= require backbone/sneakernet
 //= require_tree .
 
 $(document).foundation();

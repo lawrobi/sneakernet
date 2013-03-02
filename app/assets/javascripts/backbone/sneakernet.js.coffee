@@ -10,8 +10,8 @@ window.Sneakernet =
   Routers: {}
   Views: {}
   init: ->
-    @router = new Sneakernet.Routers.main()
+    @router = new Sneakernet.Routers.MainsRouter()
     Backbone.history.start({pushState: true})
 
 $ ->
-  Omgwant.init()
+  Sneakernet.init()

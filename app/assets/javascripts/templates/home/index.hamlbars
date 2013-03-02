@@ -1,1 +1,9 @@
 %h1 Hello
+%a.auth_provider{:href => "/auth/twitter"}
+  Twitter
+%a.auth_provider{:href => "/auth/facebook"}
+  Facebook
+%a.auth_provider{:href => "/auth/google_apps"}
+  Google
+%a.auth_provider{:href => "/auth/open_id"}
+  OpenID

@@ -1,7 +1,9 @@
 Snickernet::Application.routes.draw do
   devise_for :users
 
-  resources :users
+  namespace :api do
+    resources :users
+  end
 
 
   get "home/index"

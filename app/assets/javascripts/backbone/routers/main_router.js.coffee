@@ -5,3 +5,4 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
     '': 'main'
 
   main: ->
+    @view = new Sneakernet.Views.HomeView({el:"#content"})

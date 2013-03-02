@@ -1,19 +1,15 @@
 Snickernet::Application.routes.draw do
-  resources :authentications
-
-
   devise_for :users
-
+  resources :authentications
+  match '/auth/:provider/callback' => 'authentications#create'
+  get "home/index"
+  get "home/about"
   namespace :api do
     resources :users
   end
-
-
-  get "home/index"
-
-  get "home/about"
-
   root :to => "home#index"
+  match '*path' => "home#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

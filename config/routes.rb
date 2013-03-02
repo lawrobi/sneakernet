@@ -6,7 +6,15 @@ Snickernet::Application.routes.draw do
   get "home/about"
   namespace :api do
     resources :users
+    resources :messages
+    resources :places
+    resources :errands
   end
+
+
+  get "home/index"
+
+  get "home/about"
   root :to => "home#index"
   match '*path' => "home#index"
 

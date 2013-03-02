@@ -21,3 +21,6 @@ Login with:
 .linkedin
   %a.auth_provider{:href => "/auth/linkedin"}
     LinkedIn
+
+%h4
+  %a.link{:href => "/about"} About

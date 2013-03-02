@@ -21,6 +21,38 @@ ActiveRecord::Schema.define(:version => 20130302212819) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "errands", :force => true do |t|
+    t.integer  "requester_id"
+    t.integer  "assignee_id"
+    t.integer  "source_place_id"
+    t.integer  "arrival_place_id"
+    t.string   "summary"
+    t.text     "description"
+    t.datetime "deadline"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "from_user_id"
+    t.integer  "to_user_id"
+    t.string   "subject"
+    t.text     "body"
+    t.string   "read_status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "places", :force => true do |t|
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.integer  "postal_code"
+    t.string   "display_name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.integer  "home_place_id"

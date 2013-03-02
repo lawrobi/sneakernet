@@ -7,6 +7,13 @@ Snickernet::Application.routes.draw do
   namespace :api do
     resources :users
   end
+  resources :messages
+
+
+  resources :places
+
+
+  resources :errands
 
 
   get "home/index"

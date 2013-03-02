@@ -7,4 +7,9 @@ describe Errand do
     its(:source_place) { should be_present }
     its(:arrival_place) { should be_present }
   end
+
+  describe "associated users" do
+    its(:requester) { should be_present }
+    its(:assignee) { should be_present }
+  end
 end

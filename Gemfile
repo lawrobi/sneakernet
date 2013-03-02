@@ -21,11 +21,13 @@ group :assets do
   gem 'therubyracer' # Used by LESS. Remove?
   gem 'sass-rails',   '~> 3.2.3'
   gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-  gem "uglifier"
   gem "twitter-bootstrap-rails"
   gem "rails-backbone" # lest back bone that shit
   gem 'handlebars_assets' # More info here https://github.com/leshill/handlebars_assets
   gem 'hamlbars'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
+  gem 'zurb-foundation', '~> 4.0.0'
 end
 
 gem 'jquery-rails'

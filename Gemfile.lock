@@ -33,6 +33,9 @@ GEM
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
     coderay (1.0.8)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -156,11 +159,15 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
+    zurb-foundation (4.0.3)
+      rake
+      sass (>= 3.2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  coffee-rails (~> 3.2.1)
   devise
   haml-rails
   hamlbars
@@ -177,4 +184,5 @@ DEPENDENCIES
   sqlite3
   therubyracer
   twitter-bootstrap-rails
-  uglifier
+  uglifier (>= 1.0.3)
+  zurb-foundation (~> 4.0.0)

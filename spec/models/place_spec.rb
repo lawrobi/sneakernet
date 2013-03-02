@@ -18,4 +18,11 @@ describe Place do
     subject.errands_departing.should == [errand]
     subject.should == errand.source_place
   end
+
+  it "has associated errands arriving" do
+    errand.arrival_place = subject
+    errand.save
+    subject.errands_arriving.should == [errand]
+    subject.should == errand.arrival_place
+  end
 end

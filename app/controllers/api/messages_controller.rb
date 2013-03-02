@@ -8,14 +8,14 @@ class Api::MessagesController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @comment.image_id = params[:image_id]
-    @comment.user_id = current_user.id
+    @comment.from_user_id = current_user.id
     @comment.save!
     render json: @comment
   end
 
   def update
     @comment = Comment.find(params[:id])
-    if @comment.user = current_user
+    if @comment.from_user_id = current_user
       if @comment.update_attributes(params[:comment])
         render json: @comment
       else
@@ -26,7 +26,7 @@ class Api::MessagesController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    @comment.destroy if @comment.user = current_user
+    @comment.destroy if @comment.from_user_id = current_user
   end
 
   def show

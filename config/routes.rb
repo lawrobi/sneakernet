@@ -1,4 +1,7 @@
 Snickernet::Application.routes.draw do
+  resources :authentications
+
+
   devise_for :users
 
   namespace :api do

@@ -9,6 +9,15 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+def rubygems_latest_specs
+  # If newer Rubygems
+  if ::Gem::Specification.respond_to? :latest_specs
+    ::Gem::Specification.latest_specs
+  else
+    ::Gem.source_index.latest_specs
+  end
+end
+
 module Snickernet
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -61,7 +70,7 @@ module Snickernet
     config.assets.initialize_on_precompile = false
     config.assets.precompile += ["vendor/custom.modernizr.js"]
     # foundation is wacky
-    config.assets.paths << ::Gem::Specification.latest_specs.find {|s| s.name == "zurb-foundation"}.full_gem_path+"/js"
-    config.assets.paths << ::Gem::Specification.latest_specs.find {|s| s.name == "zurb-foundation"}.full_gem_path+"/scss"
+    config.assets.paths << rubygems_latest_specs.find {|s| s.name == "zurb-foundation"}.full_gem_path+"/js"
+    config.assets.paths << rubygems_latest_specs.find {|s| s.name == "zurb-foundation"}.full_gem_path+"/scss"
   end
 end

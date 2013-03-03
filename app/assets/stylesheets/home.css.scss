@@ -21,6 +21,8 @@
 /****************************************/
 
 $highlight-color: #CD4900;
+$light-gray: #e3e3e3;
+$dark-color: #222;
 
 body {
 }
@@ -58,6 +60,7 @@ ul, ol {
 
 #content {
   min-height: 400px;
+  background-color: $light-gray;
 }
 
 .intro {
@@ -81,7 +84,7 @@ ul, ol {
   &.initial {
     padding: 50px 0;
   }
-  .continue {
+  .button {
     margin-top: 21px;
   }
   fieldset {
@@ -153,6 +156,12 @@ form {
       }
     }
   }
+}
+.faux-input {
+  padding: 0 5px;
+  background-color: $dark-color;
+  color: #fff;
+  text-shadow: none;
 }
 
 #footer {
@@ -270,10 +279,10 @@ textarea {
   .select2-choice,
   &.select2-dropdown-open .select2-choice {
     background: #222;
-    padding: 14px 15px 12px;
+    padding: 12px 15px;
     height: auto;
     color: white;
-    border: 0;
+    border: 1px solid #cccccc;
     > div {
       display: none;
     }

@@ -8,7 +8,7 @@
   %section.top-bar-section
     %ul.right
       %li.divider
-      %li
+      %li.hide
         %a.link{:href => '/about'}
           About
       %li.has-form

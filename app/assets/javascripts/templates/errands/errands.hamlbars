@@ -1,2 +1,12 @@
-Listing errands
-.errands-list
+.intro
+  .row
+    %h2
+      I will be travelling from
+      %span.faux-input
+        San Francisco
+      to
+      %span.faux-input
+        Anywhere
+
+.row
+  .errands-list

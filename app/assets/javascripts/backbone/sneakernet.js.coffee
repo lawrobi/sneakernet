@@ -61,7 +61,7 @@ window.select_city = (obj) ->
     place.display_name
 
   $(obj).select2
-    minimumInputLength: 1
+    minimumInputLength: 0
     ajax:
       url: '/api/places'
       data: (term, page) ->

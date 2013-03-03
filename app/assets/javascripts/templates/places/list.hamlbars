@@ -1,0 +1,5 @@
+%select{:size => 10}
+  {{#each this}}
+  %option{:value => "{{id}}"}
+    {{display_name}}
+  {{/each}}

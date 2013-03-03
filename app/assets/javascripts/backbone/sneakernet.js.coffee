@@ -34,3 +34,19 @@ window.getCookie = (c_name) ->
     x = x.replace(/^\s+|\s+$/g, "")
     return unescape(y)  if x is c_name
     i++
+
+
+$(document).on "keyup", "input.choose_place", (_.debounce ->
+  unless $(@).attr("data-last-value") == @value
+    if @value.length == 0
+      $("#results").html("")
+    else
+      q = encodeURIComponent(@value)
+      $(".spinner").show()
+      $.get("/api/places?q="+q, (result) ->
+        $("#results").html HandlebarsTemplates['places/list'](result)
+        $(".spinner").hide()
+      )
+    $(@).attr("data-last-value", @value)
+    false
+)

@@ -50,7 +50,7 @@ describe Api::ErrandsController do
   end
 
   describe "GET show" do
-    it "fetches a single message" do
+    it "fetches a single errand" do
       get :show, :id => errand.id
       JSON.parse(response.body)["id"].should == errand.id
     end

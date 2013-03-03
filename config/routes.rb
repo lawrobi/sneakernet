@@ -1,5 +1,4 @@
 Snickernet::Application.routes.draw do
-  resources :offers
 
 
   devise_for :users
@@ -12,8 +11,8 @@ Snickernet::Application.routes.draw do
     resources :messages
     resources :places
     resources :errands
+    resources :offers
   end
-
 
   get "home/index"
 

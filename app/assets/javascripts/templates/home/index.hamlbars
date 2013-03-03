@@ -16,20 +16,49 @@
             %input{:placeholder => "4/12/13", :type => "text"}/
           .large-4.columns
             .row.collapse
-              %a.link.button.continue{:href => '#'}
+              %a.button.radius.continue{:href => '#'}
                 Continue
 
-.row
+.row.login-options
   %h5 Login with:
 
-  .facebook
-    %a.auth_provider{:href => "/auth/facebook"}
-      Facebook
+  %ul.horizontal
+    %li
+      .facebook
+        %a.auth_provider{:href => "/auth/facebook"}
+          Facebook
+    %li
+      .google
+        %a.auth_provider{:href => "/auth/google_apps"}
+          Google
+    %li
+      .linkedin
+        %a.auth_provider{:href => "/auth/linkedin"}
+          LinkedIn
 
-  .google
-    %a.auth_provider{:href => "/auth/google_apps"}
-      Google
-
-  .linkedin
-    %a.auth_provider{:href => "/auth/linkedin"}
-      LinkedIn
+.more-content
+  .row
+    .columns.large-2
+      &nbsp;
+    .columns.large-8.text-center
+      %h3 Unique value of crowd-sourced delivery services
+      %p
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+    .columns.large-2
+      &nbsp;
+  .row
+    .columns.large-1
+      &nbsp;
+    .columns.large-2
+      .circle
+    .columns.large-2
+      .circle
+    .columns.large-2
+      .circle
+    .columns.large-2
+      .circle
+    .columns.large-2
+      .circle
+    .columns.large-1
+      &nbsp;
+    

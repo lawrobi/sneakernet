@@ -19,10 +19,11 @@ cities.each do |city|
 end
 
 # world cities
-file = File.join(Rails.root, 'config', 'data', 'world_cities.csv')
-cities = CSV.read(file)
+file = File.join(Rails.root, 'config', 'data', 'world_cities_with_population.tsv')
+cities = CSV.read(file, { :col_sep => "\t" })
 cities.reject {|c| c[1] == "United States"}.each do |city|
-  place = Place.find_or_initialize_by_city_and_country(city[2], city[1])
+  place = Place.find_or_initialize_by_city_and_country(city[2], city[4])
   place.display_name = "#{place.city}, #{place.country}"
+  place.population = city[3].gsub(/\s/, "").to_i
   place.save
 end

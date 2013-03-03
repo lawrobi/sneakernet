@@ -8,21 +8,21 @@ class Api::ErrandsController < ApplicationController
     if params[:arrival_place_id].present?
       @errands = @errands.where(:arrival_place_id => params[:arrival_place_id])
     end
-    render json: @errands.to_json
+    render json: @errands.to_json(include_hash)
   end
 
   def create
     @errand = Errand.new(params[:errand])
     @errand.requester_id = current_user.id
     @errand.save!
-    render json: @errand.to_json
+    render json: @errand.to_json(include_hash)
   end
 
   def update
     @errand = Errand.find(params[:id])
     if @errand.requester_id = current_user.id
       if @errand.update_attributes(params[:errand])
-        render json: @errand.to_json
+        render json: @errand.to_json(include_hash)
       else
         head :no_content
       end
@@ -37,7 +37,11 @@ class Api::ErrandsController < ApplicationController
 
   def show
     @errand = Errand.find(params[:id])
-    render json: @errand.to_json
+    render json: @errand.to_json(include_hash)
   end
 
+private
+  def include_hash
+    {:include => {:source_place => {:only => :display_name}, :arrival_place => {:only => :display_name}, :requester => {:only => [:name, :image_url]}}}
+  end
 end

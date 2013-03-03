@@ -24,7 +24,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
     alert "Yeey"
 
   render: ->
-    @$el.html HandlebarsTemplates['errands/forms']({errand:@errand.toJSON()})
+    @$el.html HandlebarsTemplates['errands/forms']({errand:@errand})
     @
 
   switch_form: ->

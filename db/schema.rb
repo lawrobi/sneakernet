@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130303214938) do
+ActiveRecord::Schema.define(:version => 20130303215551) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(:version => 20130303214938) do
     t.string   "uid"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "errand_offers", :force => true do |t|
+    t.integer  "errand_id"
+    t.integer  "courier_id"
+    t.integer  "bid"
+    t.datetime "leaving_at"
+    t.datetime "arriving_at"
+    t.string   "status"
+    t.text     "message"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "errands", :force => true do |t|

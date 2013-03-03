@@ -1,6 +1,5 @@
 Snickernet::Application.routes.draw do
 
-
   devise_for :users
   resources :authentications
   match '/auth/:provider/callback' => 'authentications#create'
@@ -12,6 +11,7 @@ Snickernet::Application.routes.draw do
     resources :places
     resources :errands
     resources :offers
+    resources :errand_offers
   end
 
   get "home/index"

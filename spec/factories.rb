@@ -6,6 +6,11 @@ FactoryGirl.define do
     size { ["envelope", "cookbook", "toaster", "microwave", "oven"].sample }
   end
 
+  factory :errand_offer do
+    errand
+    courier
+  end
+
   factory :offer do
     source_place
     arrival_place

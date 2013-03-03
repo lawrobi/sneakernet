@@ -34,4 +34,19 @@ describe Api::MessagesController do
       message.reload.body.should == "Stewie"
     end
   end
+
+  describe "DELETE destroy" do
+    it "destroys an existing message" do
+      delete :destroy, :id => message.id
+      response.should be_success
+      Message.find_by_id(message.id).should be_nil
+    end
+  end
+
+  describe "GET show" do
+    it "fetches a single message" do
+      get :show, :id => message.id
+      JSON.parse(response.body)["id"].should == message.id
+    end
+  end
 end

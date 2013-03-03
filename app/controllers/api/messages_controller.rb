@@ -25,7 +25,8 @@ class Api::MessagesController < ApplicationController
 
   def destroy
     @message = Message.find(params[:id])
-    @message.destroy if @message.from_user_id = current_user
+    @message.destroy if @message.from_user_id = current_user.id
+    head :no_content
   end
 
   def show

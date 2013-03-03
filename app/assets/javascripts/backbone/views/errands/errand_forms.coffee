@@ -10,6 +10,11 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
     @current_form = 1
     @render()
     @switch_form()
+    @errand = JSON.parse($.cookie("errand"))
+    if not @errand
+      Sneakernet.router.navigate("", {trigger:true})
+
+
 
   next_form: ->
     @current_form = @current_form + 1
@@ -19,7 +24,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
     alert "Yeey"
 
   render: ->
-    @$el.html HandlebarsTemplates['errands/forms']()
+    @$el.html HandlebarsTemplates['errands/forms']({errand:@errand.toJSON()})
     @
 
   switch_form: ->

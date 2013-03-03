@@ -1,16 +1,23 @@
+.intro
+  .row
+    %h2 Add more details to your item delivery request
+
 %form.request_form
   .forms{'data-index' => '1'}
-    Hello
+    .row
+      Hello
 
-    .next_form
-      NEXT!!!
+    .row.next_form
+      %button.button.radius Continue
 
   .forms{'data-index' => '2'}
-    World
-    .next_form
-      NEXT!!!
+    .row
+      World
+      .next_form
+        %button.button.radius Continue
 
   .forms{'data-index' => '3'}
-    !
-    .submit_form
-      SUBMIT
+    .row
+      !
+      .submit_form
+        %button.button.radius Submit

@@ -61,9 +61,12 @@ ul, ol {
 }
 
 .intro {
-  background: #ccc url('/assets/bg-map-gray.jpg');
+  background-color: #ccc;
   padding: 80px 0;
   margin: 0 0;
+  &.home {
+    background-image: url('/assets/bg-map-gray.jpg');
+  }
   h2 {
     margin: 0 0 5px;
   }
@@ -82,6 +85,11 @@ ul, ol {
   }
   fieldset {
     padding: 0;
+  }
+}
+form {
+  label {
+    margin: 0 0 6px;
   }
 }
 .more-content {
@@ -115,7 +123,9 @@ ul, ol {
 }
 
 .forms {
-  display:none;
+  display: none;
+  padding: 40px 0;
+  background-color: #ababab;
 }
 
 /****************************************

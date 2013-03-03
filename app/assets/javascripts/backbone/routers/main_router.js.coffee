@@ -34,7 +34,7 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
     placeFormatSelection = (place) ->
       place.display_name
 
-    $("#errand_deadline").select2
+    $("#deliver_to").select2
       minimumInputLength: 1
       ajax:
         url: '/api/places'

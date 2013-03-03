@@ -77,19 +77,46 @@ ul, ol {
 }
 .form {
   background-color: #ddd;
+  margin: 0;
   &.initial {
     padding: 50px 0;
-    .continue {
-      margin-top: 21px;
-    }
+  }
+  .continue {
+    margin-top: 21px;
   }
   fieldset {
     padding: 0;
+    border: 0;
   }
+  .flabel {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-top: 38px;
+  }
+  .form-heading {
+    text-align: center;
+    border-top: 1px solid #777;
+    margin: 20px 0 -16px;
+    font-size: 20px;
+    span {
+      background-color: #ababab;
+      position: relative;
+      top: -16px;
+      padding: 0 10px;
+    }
+  }
+}
+.sizes {
+  padding: 30px 0 40px;
 }
 form {
   label {
     margin: 0 0 6px;
+  }
+  textarea {
+    height: auto;
+    padding: 15px 15px;
   }
 }
 .more-content {
@@ -115,7 +142,11 @@ form {
 #footer {
   padding: 10px 0;
   border-top: 1px solid #ccc;
+  p {
+    margin: 0;
+  }
   ul {
+    margin: 0;
     a {
       font-size: 14px;
     }

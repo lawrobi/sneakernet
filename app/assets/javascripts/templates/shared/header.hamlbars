@@ -2,14 +2,14 @@
   %ul.title-area
     %li.name
       %h1
-        %a{:href => '#'}
-          Runners Inc.
+        %a.link{:href => '/'}
+          {{sitename}}
 
   %section.top-bar-section
     %ul.right
       %li.divider
       %li
-        %a{:href => '/about'}
+        %a.link{:href => '/about'}
           About
       %li.has-form
         {{#if current_user}}

@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+}
+
+.row.full-width {
+  max-width: 100%;
+}
+
 #header {
   background: #333;
   color: #fff;
@@ -9,6 +16,21 @@
     color: #eee;
     &:hover {
       color: #aaa;
+    }
+  }
+}
+
+#content {
+  margin: 0 0 20px;
+  min-height: 400px;
+}
+
+#footer {
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  ul {
+    a {
+      font-size: 14px;
     }
   }
 }

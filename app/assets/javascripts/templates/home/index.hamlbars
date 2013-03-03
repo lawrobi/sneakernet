@@ -1,26 +1,15 @@
-%h1 Hello
+.row
 
-Login with:
+  %h5 Login with:
 
-%h5 Hooked up
+  .facebook
+    %a.auth_provider{:href => "/auth/facebook"}
+      Facebook
 
-.facebook
-  %a.auth_provider{:href => "/auth/facebook"}
-    Facebook
+  .google
+    %a.auth_provider{:href => "/auth/google_apps"}
+      Google
 
-%h5 easily possible, but not hooked up yet
-
-.twitter
-  %a.auth_provider{:href => "/auth/twitter"}
-    Twitter
-
-.google
-  %a.auth_provider{:href => "/auth/google_apps"}
-    Google
-
-.linkedin
-  %a.auth_provider{:href => "/auth/linkedin"}
-    LinkedIn
-
-%h4
-  %a.link{:href => "/about"} About
+  .linkedin
+    %a.auth_provider{:href => "/auth/linkedin"}
+      LinkedIn

@@ -17,11 +17,12 @@ class AuthenticationsController < ApplicationController
         sign_in(user)
       else
         #new user
+        image_url = auth[:info][:image]
         name = auth[:info][:name]
         email = auth[:info][:email]
         password_length = 8
         password = Devise.friendly_token.first(password_length)
-        user = User.create!(:name => name, :email => email, :password => password, :password_confirmation => password)
+        user = User.create!(:image_url => image_url, :name => name, :email => email, :password => password, :password_confirmation => password)
         sign_in(user)
         current_user.authentications.find_or_create_by_provider_and_uid(auth['provider'], auth['uid'])
         flash[:notice] = "Account created"

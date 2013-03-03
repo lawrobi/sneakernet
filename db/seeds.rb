@@ -14,6 +14,7 @@ cities.each do |city|
   place = Place.find_or_initialize_by_city_and_state(city[0], city[1])
   place.country = "United States"
   place.display_name = "#{place.city}, #{place.state}"
+  place.population = city[2].to_i
   place.save
 end
 

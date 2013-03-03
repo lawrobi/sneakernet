@@ -17,8 +17,8 @@
             %input#errand_deadline{:name => 'errand[deadline]', :placeholder => "4/12/13", :type => "text"}/
           .large-4.columns
             .row.collapse
-              %a.button.radius.continue{:href => '#'}
-                Continue
+              %a.button.success.radius.continue{:href => '#'}
+                Start a Request
   .row
     %h3 I'm ready to take stuff somewhere
     %form.custom{:name => 'errand_new'}
@@ -30,7 +30,7 @@
           .large-4.columns
             .row.collapse
               %a.button.radius.continue{:href => '#'}
-                Continue
+                Browse Errands
 
 .more-content
   .row

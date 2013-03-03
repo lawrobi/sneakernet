@@ -2,7 +2,6 @@ FactoryGirl.define do
   factory :errand do
     source_place
     arrival_place
-    assignee
     requester
     size { ["envelope", "cookbook", "toaster", "microwave", "oven"].sample }
   end

@@ -8,8 +8,5 @@ describe Errand do
     its(:arrival_place) { should be_a Place }
   end
 
-  describe "associated users" do
-    its(:requester) { should be_a User }
-    its(:assignee) { should be_a User }
-  end
+  its(:requester) { should be_a User }
 end

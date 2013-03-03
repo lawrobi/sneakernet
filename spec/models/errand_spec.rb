@@ -11,7 +11,17 @@ describe Errand do
   its(:requester) { should be_a User }
 
   context "it has an accepted offer associated with it" do
-    let(:errand_offer) { FactoryGirl.create(:errand_offer, :errand => subject)}
+    let(:errand_offer) { FactoryGirl.create(:errand_offer, :errand => subject,
+                                            :status => :accepted )}
+
+    before { subject.save }
+
+    its(:errand_offers) { should include(errand_offer) }
+  end
+
+  context "it has a pending offer associated with it" do
+    let(:errand_offer) { FactoryGirl.create(:errand_offer, :errand => subject,
+                                            :status => :pending )}
 
     before { subject.save }
 

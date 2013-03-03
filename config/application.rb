@@ -59,5 +59,9 @@ module Snickernet
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.assets.initialize_on_precompile = false
+    config.assets.precompile += ["vendor/custom.modernizr.js"]
+    # foundation is wacky
+    config.assets.paths << ::Gem::Specification.latest_specs.find {|s| s.name == "zurb-foundation"}.full_gem_path+"/js"
+    config.assets.paths << ::Gem::Specification.latest_specs.find {|s| s.name == "zurb-foundation"}.full_gem_path+"/scss"
   end
 end

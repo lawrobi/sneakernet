@@ -11,6 +11,26 @@ describe Api::ErrandsController do
       errands.count.should == 1
       errands.first["id"].should == errand.id
     end
+
+    it "retrieve errands picking up at a place" do
+      errand
+      get :index, :source_place_id => FactoryGirl.create(:place).id
+      errands = JSON.parse(response.body)
+      errands.count.should == 0
+      get :index, :source_place_id => errand.source_place.id
+      errands = JSON.parse(response.body)
+      errands.first["id"].should == errand.id
+    end
+
+    it "retrieve errands dropping of at a place" do
+      errand
+      get :index, :arrival_place_id => FactoryGirl.create(:place).id
+      errands = JSON.parse(response.body)
+      errands.count.should == 0
+      get :index, :arrival_place_id => errand.arrival_place.id
+      errands = JSON.parse(response.body)
+      errands.first["id"].should == errand.id
+    end
   end
 
   describe "POST create" do

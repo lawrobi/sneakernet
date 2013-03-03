@@ -1,7 +1,13 @@
 class Api::ErrandsController < ApplicationController
 
   def index
-    @errands = Errand.all
+    @errands = Errand.scoped
+    if params[:source_place_id].present?
+      @errands = @errands.where(:source_place_id => params[:source_place_id])
+    end
+    if params[:arrival_place_id].present?
+      @errands = @errands.where(:arrival_place_id => params[:arrival_place_id])
+    end
     render json: @errands.to_json
   end
 

@@ -11,6 +11,26 @@ describe Api::OffersController do
       offers.count.should == 1
       offers.first["id"].should == offer.id
     end
+
+    it "retrieve offers picking up at a place" do
+      offer
+      get :index, :source_place_id => FactoryGirl.create(:place).id
+      offers = JSON.parse(response.body)
+      offers.count.should == 0
+      get :index, :source_place_id => offer.source_place.id
+      offers = JSON.parse(response.body)
+      offers.first["id"].should == offer.id
+    end
+
+    it "retrieve offers dropping of at a place" do
+      offer
+      get :index, :arrival_place_id => FactoryGirl.create(:place).id
+      offers = JSON.parse(response.body)
+      offers.count.should == 0
+      get :index, :arrival_place_id => offer.arrival_place.id
+      offers = JSON.parse(response.body)
+      offers.first["id"].should == offer.id
+    end
   end
 
   describe "POST create" do

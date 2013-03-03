@@ -1,6 +1,12 @@
 class Api::OffersController < ApplicationController
   def index
-    @offers = Offer.all
+    @offers = Offer.scoped
+    if params[:source_place_id].present?
+      @offers = @offers.where(:source_place_id => params[:source_place_id])
+    end
+    if params[:arrival_place_id].present?
+      @offers = @offers.where(:arrival_place_id => params[:arrival_place_id])
+    end
     render json: @offers.to_json
   end
 

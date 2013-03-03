@@ -14,7 +14,7 @@ class Api::MessagesController < ApplicationController
 
   def update
     @message = Message.find(params[:id])
-    if @message.from_user_id = current_user
+    if @message.from_user_id = current_user.id
       if @message.update_attributes(params[:message])
         render json: @message.to_json(:include => [:from_user, :to_user])
       else

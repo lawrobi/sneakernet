@@ -1,6 +1,6 @@
-%footer#footer.row.full-width
+%footer.row.full-width
   .large-4.columns
-    %p Runners Inc.
+    %p {{sitename}}
   .large-8.columns
     %ul.inline-list.right
       %li

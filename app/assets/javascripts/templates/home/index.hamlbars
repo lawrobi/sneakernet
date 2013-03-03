@@ -32,19 +32,6 @@
               %a.button.radius.continue{:href => '#'}
                 Continue
 
-.row.login-options
-  %h5 Login with:
-
-  %ul.horizontal
-    %li
-      .facebook
-        %a.auth_provider{:href => "/auth/facebook"}
-          Facebook
-    %li
-      .linkedin
-        %a.auth_provider{:href => "/auth/linkedin"}
-          LinkedIn
-
 .more-content
   .row
     .columns.large-2
@@ -70,4 +57,4 @@
       .circle
     .columns.large-1
       &nbsp;
-    
+

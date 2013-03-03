@@ -1,6 +1,7 @@
 class Sneakernet.Routers.MainsRouter extends Backbone.Router
   initialize: (options) ->
     @header = new Sneakernet.Views.HeaderView({el:"#header"})
+    @footer = new Sneakernet.Views.FooterView({el:"#footer"})
     $("html").on "click", ".link", (event) ->
       event.preventDefault()
       if @getAttribute('data-page') == 'home'

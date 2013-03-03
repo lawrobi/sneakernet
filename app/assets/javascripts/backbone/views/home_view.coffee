@@ -12,5 +12,5 @@ class Sneakernet.Views.HomeView extends Backbone.View
     @
 
   request: ->
-    alert "yo"
+    Sneakernet.router.navigate("request", {trigger:true})
 

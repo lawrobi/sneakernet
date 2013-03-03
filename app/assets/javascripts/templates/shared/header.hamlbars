@@ -1,0 +1,6 @@
+%h1 this is header
+{{#if current_user}}
+Logged in with: {{current_user.name}}
+{{else}}
+Not logged in
+{{/if}}

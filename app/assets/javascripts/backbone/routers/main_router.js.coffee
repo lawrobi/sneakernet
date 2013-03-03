@@ -1,5 +1,6 @@
 class Sneakernet.Routers.MainsRouter extends Backbone.Router
   initialize: (options) ->
+    @header = new Sneakernet.Views.HeaderView({el:"#header"})
     $("html").on "click", ".link", (event) ->
       event.preventDefault()
       if @getAttribute('data-page') == 'home'
@@ -10,6 +11,7 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
   routes:
     '': 'main'
     'about':'about'
+    '_=_':'main'
 
   main: ->
     @view = new Sneakernet.Views.HomeView({el:"#content"})

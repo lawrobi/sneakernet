@@ -6,6 +6,12 @@ FactoryGirl.define do
     requester
   end
 
+  factory :offer do
+    source_place
+    arrival_place
+    courier
+  end
+
   factory :message do
     subject { Faker::Lorem.sentence }
     body { Faker::Lorem.paragraph }
@@ -22,7 +28,8 @@ FactoryGirl.define do
     display_name { "#{city}, #{state}" }
   end
 
-  factory :user, :aliases => [:assignee, :requester, :from_user, :to_user] do
+  factory :user, :aliases => [:assignee, :requester, :from_user, :to_user,
+                              :courier] do
     name { Faker::Name.name }
     password "Blueberry23"
     password_confirmation "Blueberry23"

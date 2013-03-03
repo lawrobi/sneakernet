@@ -1,4 +1,7 @@
 Snickernet::Application.routes.draw do
+  resources :offers
+
+
   devise_for :users
   resources :authentications
   match '/auth/:provider/callback' => 'authentications#create'

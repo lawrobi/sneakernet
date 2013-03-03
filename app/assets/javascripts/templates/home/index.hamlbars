@@ -28,10 +28,6 @@
         %a.auth_provider{:href => "/auth/facebook"}
           Facebook
     %li
-      .google
-        %a.auth_provider{:href => "/auth/google_apps"}
-          Google
-    %li
       .linkedin
         %a.auth_provider{:href => "/auth/linkedin"}
           LinkedIn

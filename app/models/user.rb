@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 
   has_many :authentications
   has_many :inbox, :class_name => "Message", :foreign_key => :to_user_id
+  has_many :requested_errands, :class_name => "Errand",
+           :foreign_key => :requester_id
+  has_many :offers, :class_name => "Offer",
+           :foreign_key => :courier_id
   belongs_to :home_place, :class_name => "Place"
 
   # Setup accessible (or protected) attributes for your model

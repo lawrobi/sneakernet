@@ -4,12 +4,14 @@ FactoryGirl.define do
     arrival_place
     assignee
     requester
+    size { ["envelope", "cookbook", "toaster", "microwave", "oven"].sample }
   end
 
   factory :offer do
     source_place
     arrival_place
     courier
+    size { ["envelope", "cookbook", "toaster", "microwave", "oven"].sample }
   end
 
   factory :message do

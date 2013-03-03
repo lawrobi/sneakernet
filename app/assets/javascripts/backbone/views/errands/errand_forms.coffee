@@ -22,11 +22,10 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
 
   submit_form: ->
     fields = $("#request_form").find("input")
-    console.log fields
     errand = {}
     $.each fields, (n, f) ->
-      errand[$(f).attr('data-field')] = $(f).val()
-    alert "Yeey"
+      field_name = $(f).attr('data-field')
+      errand[field_name] = $(f).val() if field_name
     # if current user
     if window.current_user
       alert window.current_user.name

@@ -23,6 +23,8 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
 
   request: ->
     @view = new Sneakernet.Views.ErrandForms({el:"#content"})
+    select_city("#deliver_to")
+
 
   errands: ->
     @errands = new Sneakernet.Collections.Errands()

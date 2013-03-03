@@ -5,17 +5,28 @@
 
 .form.initial
   .row
+    %h3 I need stuff delivered
     %form.custom{:name => 'errand_new'}
       %fieldset
         .row
-          .large-4.columns
+          .large-6.columns
             %label My delivery destination
-            %input.choose_place.errand_place1{:name => 'errand[place1]', :placeholder => "Brooklyn, NY", :type => "text"}/
-            .spinner
-            #results
-          .large-4.columns
+            %input.errand_place1{:name => 'errand[place1]', :placeholder => "New York, NY", :type => "text"}/
+          .large-2.columns
             %label Date
             %input#errand_deadline{:name => 'errand[deadline]', :placeholder => "4/12/13", :type => "text"}/
+          .large-4.columns
+            .row.collapse
+              %a.button.radius.continue{:href => '#'}
+                Continue
+  .row
+    %h3 I'm ready to take stuff somewhere
+    %form.custom{:name => 'errand_new'}
+      %fieldset
+        .row
+          .large-8.columns
+            %label I'm currently in
+            %input.errand_place1{:name => 'errand[place1]', :placeholder => "San Francisco, CA", :type => "text"}/
           .large-4.columns
             .row.collapse
               %a.button.radius.continue{:href => '#'}

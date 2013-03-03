@@ -15,7 +15,6 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
       Sneakernet.router.navigate("", {trigger:true})
 
 
-
   next_form: ->
     @current_form = @current_form + 1
     @switch_form()

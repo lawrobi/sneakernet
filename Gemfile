@@ -7,6 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'omniauth'
 gem "omniauth-facebook"
+gem 'omniauth-linkedin'
 gem 'koala'
 gem 'devise'
 gem "haml-rails"

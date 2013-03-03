@@ -1,3 +1,3 @@
-class Sneakernet.Collections.ErrandsCollection extends Backbone.Collection
+class Sneakernet.Collections.Errands extends Backbone.Collection
   model: Sneakernet.Models.Errand
-  url: '/errands'
+  url: '/api/errands'

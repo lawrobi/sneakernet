@@ -11,10 +11,18 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
   routes:
     '': 'main'
     'about':'about'
+    'errands':'errands'
     '_=_':'main'
 
   main: ->
     @view = new Sneakernet.Views.HomeView({el:"#content"})
+
+  errands: ->
+    @errands = new Sneakernet.Collections.Errands()
+    @errands.fetch()
+    @view = new Sneakernet.Views.ErrandsView
+      el:"#content"
+      collection: @errands
 
   about: ->
     @view = new Sneakernet.Views.StaticView({el:"#content", page:'about'})

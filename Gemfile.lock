@@ -97,6 +97,7 @@ GEM
     mime-types (1.21)
     multi_json (1.6.1)
     multipart-post (1.1.5)
+    oauth (0.4.7)
     oauth2 (0.8.0)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -108,6 +109,11 @@ GEM
       rack
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
+    omniauth-linkedin (0.1.0)
+      omniauth-oauth (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
@@ -202,6 +208,7 @@ DEPENDENCIES
   koala
   omniauth
   omniauth-facebook
+  omniauth-linkedin
   pg
   pry
   pry-nav

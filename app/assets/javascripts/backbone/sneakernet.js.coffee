@@ -50,3 +50,25 @@ $(document).on "keyup", "input.choose_place", (_.debounce ->
     $(@).attr("data-last-value", @value)
     false
 )
+
+
+window.select_city = (obj) ->
+
+  placeFormatResult = (place) ->
+    "#{place.display_name}"
+
+  placeFormatSelection = (place) ->
+    place.display_name
+
+  $(obj).select2
+    minimumInputLength: 1
+    ajax:
+      url: '/api/places'
+      data: (term, page) ->
+        q: term
+      results: (data, page) ->
+        {results:data}
+    formatResult: placeFormatResult
+    formatSelection: placeFormatSelection
+    escapeMarkup: (m) ->
+      m

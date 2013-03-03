@@ -12,10 +12,14 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
     '': 'main'
     'about':'about'
     'errands':'errands'
+    'request':'request'
     '_=_':'main'
 
   main: ->
     @view = new Sneakernet.Views.HomeView({el:"#content"})
+
+  request: ->
+    @view = new Sneakernet.Views.ErrandForms({el:"#content"})
 
   errands: ->
     @errands = new Sneakernet.Collections.Errands()

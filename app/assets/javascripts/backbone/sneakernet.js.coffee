@@ -15,9 +15,3 @@ window.Sneakernet =
 
 $ ->
   Sneakernet.init()
-
-
-window.variables = {}
-variables = window.variables
-
-variables.site_name = "Site_name"

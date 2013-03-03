@@ -1,7 +1,6 @@
 
 class Sneakernet.Views.ErrandView extends Backbone.View
 
-  className: 'gallery-image'
   events:
     'click .get':'get'
   get: ->

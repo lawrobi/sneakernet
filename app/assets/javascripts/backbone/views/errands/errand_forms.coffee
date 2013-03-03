@@ -22,6 +22,12 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
 
   submit_form: ->
     alert "Yeey"
+    # if current user
+    if window.current_user
+      alert window.current_user.name
+      collection = new Sneakernet.Collections.Errands()
+      collection.create(@errand)
+    # if not
 
   render: ->
     @$el.html HandlebarsTemplates['errands/forms']({errand:@errand})

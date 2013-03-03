@@ -20,11 +20,9 @@
 
     %ul
       %li
-        .facebook.connect-btn
-          %a.auth_provider{:href => "/auth/facebook"}
-            Facebook
+        %a.facebook.connect-btn.auth_provider{:href => "/auth/facebook"}
+          Facebook
       %li
-        .linkedin.connect-btn
-          %a.auth_provider{:href => "/auth/linkedin"}
-            LinkedIn
+        %a.linkedin.connect-btn.auth_provider{:href => "/auth/linkedin"}
+          LinkedIn
   %a.close-reveal-modal &#215;

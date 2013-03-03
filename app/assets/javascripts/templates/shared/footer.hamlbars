@@ -13,18 +13,18 @@
         %a{:href => "#"} Blog
 
 #loginModal.reveal-modal.medium
-  %h2 Sign In
+  %h2.text-center Sign In
   .row.login-options
-    %p.lead Getting started with us is easy.
-    %h5 Login with:
+    %h5.text-center.lead To get started connect using the services below.
+    %p.text-center If you don't have an account, it will be created automatically.
 
-    %ul.horizontal
+    %ul
       %li
-        .facebook
+        .facebook.connect-btn
           %a.auth_provider{:href => "/auth/facebook"}
             Facebook
       %li
-        .linkedin
+        .linkedin.connect-btn
           %a.auth_provider{:href => "/auth/linkedin"}
             LinkedIn
   %a.close-reveal-modal &#215;

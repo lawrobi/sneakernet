@@ -21,12 +21,17 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
     @switch_form()
 
   submit_form: ->
+    fields = $("#request_form").find("input")
+    console.log fields
+    errand = {}
+    $.each fields, (n, f) ->
+      errand[$(f).attr('data-field')] = $(f).val()
     alert "Yeey"
     # if current user
     if window.current_user
       alert window.current_user.name
       collection = new Sneakernet.Collections.Errands()
-      collection.create(@errand)
+      collection.create(errand)
     # if not
 
   render: ->

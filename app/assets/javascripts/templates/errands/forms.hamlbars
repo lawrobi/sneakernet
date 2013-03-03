@@ -2,7 +2,7 @@
   .row
     %h2 Add more details to your item delivery request
 
-%form.request_form.form
+%form#request_form.form
   .forms{'data-index' => '1'}
 
     %fieldset
@@ -11,25 +11,25 @@
           .row
             .large-9.columns
               %label Item Name / Title 
-              %input{:name => '', :placeholder => "Large envelope", :type => "text"}/
+              %input{:name => '', :placeholder => "Large envelope", :type => "text", 'data-field' => 'name'}/
             .large-3.columns
               %label By Date
-              %input{:name => '', :placeholder => "4/12/13", :type => "text", :value => "4/12/13"}/
+              %input{:name => '', :placeholder => "4/12/13", :type => "text", :value => "4/12/13", 'data-field' => 'deadline'}/
           .row
             .large-12.columns
               %label Street Address
-              %input{:name => '', :placeholder => "123 Main St", :type => "text"}/
+              %input{:name => '', :placeholder => "123 Main St", :type => "text", 'data-field' => 'street_addres'}/
           .row
             .large-9.columns
               %label Destination City
-              %input{:name => '', :placeholder => "New York, NY", :type => "text", :value => "New York, NY"}/
+              %input{:name => '', :placeholder => "New York, NY", :type => "text", :value => "New York, NY", 'data-field' => 'arrival_place_id[city]'}/
             .large-3.columns
               %label Zip Code
-              %input{:name => '', :placeholder => "10000", :type => "text"}/
+              %input{:name => '', :placeholder => "10000", :type => "text", 'data-field' => 'postal_code'}/
           .row
             .large-12.columns
               %label Brief Description
-              %textarea{:name => '', :placeholder => "Extra information"}
+              %textarea{:name => '', :placeholder => "Extra information", 'data-field' => 'description'}
           .row
             .columns.large-12
               %h4.form-heading

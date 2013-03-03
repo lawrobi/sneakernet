@@ -17,7 +17,7 @@ class Sneakernet.Views.HomeView extends Backbone.View
 
   request: ->
     errand = {}
-    errand.place1 = $(".errand_place1").val()
+    #errand.place1 = $(".errand_place1").val()
     errand.deadline = $(".errand_place1").val()
     $.cookie("errand", JSON.stringify(errand), 1)
     Sneakernet.router.navigate("request", {trigger:true})

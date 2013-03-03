@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130303215551) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "size"
+    t.string   "name"
   end
 
   create_table "messages", :force => true do |t|

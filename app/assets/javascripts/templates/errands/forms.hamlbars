@@ -8,16 +8,16 @@
       Hello
 
     .row.next_form
-      %button.button.radius Continue
+      %a.button.radius Continue
 
   .forms{'data-index' => '2'}
     .row
       World
       .next_form
-        %button.button.radius Continue
+        %a.button.radius Continue
 
   .forms{'data-index' => '3'}
     .row
       !
       .submit_form
-        %button.button.radius Submit
+        %a.button.radius Submit

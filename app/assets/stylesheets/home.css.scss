@@ -1,6 +1,19 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/****************************************
+/* Mixins
+/****************************************/
+
+@mixin border-radius($topleft, $topright: $topleft, $bottomright: $topleft, $bottomleft: $topleft) {
+  -moz-border-radius: $topleft $topright $bottomright $bottomleft;
+  -ms-border-radius: $topleft $topright $bottomright $bottomleft;
+  -o-border-radius: $topleft $topright $bottomright $bottomleft;
+  -webkit-border-radius: $topleft $topright $bottomright $bottomleft;
+  border-radius: $topleft $topright $bottomright $bottomleft;
+}
+
+/****************************************
+/* /Mixins
+/****************************************/
+
 
 body {
 }
@@ -21,8 +34,31 @@ body {
 }
 
 #content {
-  margin: 0 0 20px;
   min-height: 400px;
+}
+
+.intro {
+  background-color: #ccc;
+  padding: 20px 0;
+  margin: 0 0;
+  h2 {
+    margin: 0 0 5px;
+  }
+  h3 {
+    font-weight: 300;
+    margin: 0;
+  } 
+}
+.form {
+  background-color: #ddd;
+  .fieldset {
+    padding: 0;
+  }
+  &.initial {
+    .continue {
+      margin-top: 21px;
+    }
+  }
 }
 
 #footer {
@@ -35,7 +71,38 @@ body {
   }
 }
 
-
 .forms {
   display:none;
 }
+
+/****************************************
+/* Foundation Overrides
+/****************************************/
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  background-color: #222;
+  color: #fff;
+  padding: 25px 15px;
+  font-size: 18px;
+  @include border-radius(4px);
+  &:focus {
+    color: #333;
+  }
+}
+
+/****************************************
+/* /Foundation Overrides
+/****************************************/

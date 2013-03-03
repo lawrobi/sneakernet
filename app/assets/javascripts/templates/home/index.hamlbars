@@ -1,5 +1,25 @@
-.row
+.intro
+  .row
+    %h2 It's like Lyft for Courier Services
+    %h3 Get your stuff delivered in the US by reliable runners at affordable rates
 
+.form.initial
+  .row
+    %form.custom
+      %fieldset
+        .row
+          .large-4.columns
+            %label My delivery destination
+            %input{:placeholder => "Brooklyn, NY", :type => "text"}/
+          .large-4.columns
+            %label Date
+            %input{:placeholder => "4/12/13", :type => "text"}/
+          .large-4.columns
+            .row.collapse
+              %a.link.button.continue{:href => '#'}
+                Continue
+
+.row
   %h5 Login with:
 
   .facebook

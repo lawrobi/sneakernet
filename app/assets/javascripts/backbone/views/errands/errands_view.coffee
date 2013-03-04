@@ -6,7 +6,7 @@ class Sneakernet.Views.ErrandsView extends Backbone.View
     @collection.on 'reset', @render, @
     @collection.on 'remove', @render, @
     @collection.on 'add', @addOne, @
-    @render()
+    #@render()
 
   addOne: (errand) ->
     view = new Sneakernet.Views.ErrandView(model: errand)

@@ -1,6 +1,6 @@
 %li
   %h4.title
-    %span.status Open for bidding
+    %span.status.accepted Accepted
     %a.link{:href => "{{link_to 'errands' this}}"} {{summary}}
   %p.subline
     From
@@ -15,3 +15,7 @@
     &#47;
     Suggested price:
     %b ${{estimated_price}}
+  .actions
+    %a.button.small.success.radius{:href => '#'} Complete
+    %a.button.tiny.secondary.radius{:href => '#'} Cancel
+

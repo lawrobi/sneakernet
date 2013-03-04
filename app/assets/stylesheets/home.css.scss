@@ -360,7 +360,8 @@ table {
     list-style: none;
     margin-bottom: 15px;
     padding-bottom: 15px;
-    // border-bottom: 1px dashed $light-color-2;
+    position: relative;
+    border-bottom: 1px dashed $light-color-2;
     .user-photo {
       width: 35px;
       height: 35px;
@@ -388,16 +389,32 @@ table {
         color: #777;
         font-size: 14px;
         font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-        .open {
+        &.open,
+        &.accepted {
           color: #31a01d;
         }
-        .in-transit {
+        &.in-transit {
           color: #ff6c00;
         }
       }
     }
     .subline {
       color: #999;
+    }
+    .actions {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      .button {
+        opacity: .2;
+      }
+    }
+    &:hover {
+      .actions {
+        .button {
+          opacity: 1;
+        }      
+      }
     }
   }
 }

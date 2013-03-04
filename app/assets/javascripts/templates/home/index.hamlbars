@@ -42,6 +42,6 @@
       %p
         %a.link{:href => '/about'} Read more in About &#8594;
     .columns.large-4
-      .circle.large
-
+      / .circle.large
+      %img{:src => '/assets/homepage-lowerlevel-owl-icon.png'}
 

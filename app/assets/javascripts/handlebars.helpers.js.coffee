@@ -32,8 +32,11 @@ Handlebars.registerHelper "timeAgo", (date) ->
   date = moment(date)
   date.fromNow()
 
-Handlebars.registerHelper "link_to_current_user", () ->
+Handlebars.registerHelper "current_user_url", () ->
   "/users/#{window.current_user.id}"
 
 Handlebars.registerHelper "current_user_name", () ->
   window.current_user.name
+
+Handlebars.registerHelper "current_user_large_image_url", () ->
+  window.current_user.large_image_url

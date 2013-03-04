@@ -50,6 +50,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
   submit_form: ->
     fields = $("#request_form").find("input")
     errand = {}
+    errand.estimated_price = parseInt($("#amount").text().replace(/\D+/, ''))
     $.each fields, (n, f) ->
       field_name = $(f).attr('data-field')
       errand[field_name] = $(f).val() if field_name
@@ -57,6 +58,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
     errand.source_place = {}
     errand.arrival_place.display_name = $("#s2id_deliver_to .select2-choice span").text()
     errand.source_place.display_name = $("#s2id_deliver_from .select2-choice span").text()
+
 
     # if current user
     if window.current_user

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130304073628) do
+ActiveRecord::Schema.define(:version => 20130304082916) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20130304073628) do
     t.string   "street_address"
     t.integer  "distance"
     t.string   "image_url"
+    t.integer  "estimated_price"
   end
 
   create_table "messages", :force => true do |t|

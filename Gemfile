@@ -19,6 +19,7 @@ group :development do
   gem 'sqlite3'
 end
 group :assets do
+  gem 'jquery-ui-rails'
   gem "select2-rails"
   gem 'sass-rails',   '~> 3.2.3'
   gem "rails-backbone" # lest back bone that shit

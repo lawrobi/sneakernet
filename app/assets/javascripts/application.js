@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.slider
 //= require select2
 //= require foundation
 //= require underscore

@@ -13,13 +13,18 @@ class Sneakernet.Views.SingleErrand extends Backbone.View
     @
 
   accept: ->
-    @collection = new Sneakernet.Collections.ErrandOffers()
-    bid = @model.get('estimated_price') - 30 + Math.random(60)
-    errand_id=@model.get('id')
-    @collection.create
-      errand_id:errand_id
-      bid:bid
-      leaving_at:today
-      arriving_at:tomorrow
+    if window.current_user
+      @collection = new Sneakernet.Collections.ErrandOffers()
+      bid = @model.get('estimated_price') - 30 + Math.random(60)
+      errand_id=@model.get('id')
+      @collection.create
+        errand_id:errand_id
+        bid:bid
+        leaving_at:today
+        arriving_at:tomorrow
+    else
+      $('.login-link').trigger 'click'
+      false
+
 
 

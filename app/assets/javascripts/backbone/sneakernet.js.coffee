@@ -78,3 +78,18 @@ window.select_city = (obj, name) ->
     display_name_class = "#s2id_#{obj[1..obj.length]} .select2-choice span"
     console.log display_name_class
     $(display_name_class).text(name)
+
+window.today = ->
+  today = new Date()
+  dd = today.getDate()
+  mm = today.getMonth()+1
+  yyyy = today.getFullYear()
+  "#{mm}/#{dd}/#{yyyy}"
+
+window.tomorrow = ->
+  today = new Date()
+  tomorrow = new Date(today.setDate(today.getDate() + 1))
+  dd = tomorrow.getDate()
+  mm = tomorrow.getMonth()+1
+  yyyy = tomorrow.getFullYear()
+  "#{mm}/#{dd}/#{yyyy}"

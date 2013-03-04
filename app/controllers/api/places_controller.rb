@@ -7,7 +7,7 @@ class Api::PlacesController < ApplicationController
   def index
     @places = Place.scoped
     if params[:q]
-      places = @places.where("display_name like ?", "%#{params[:q]}%")                                .order("population desc").limit(50)
+      places = @places.where("display_name like ?", "#{params[:q]}%")                                .order("population desc").limit(50)
       us_places = places.select {|p| p.country == "United States"}
       world_places = places - us_places
       @places = (us_places + world_places).take(10)

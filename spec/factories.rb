@@ -3,6 +3,7 @@ FactoryGirl.define do
     source_place
     arrival_place
     requester
+    distance { rand(5000) }
     size { ["envelope", "cookbook", "toaster", "microwave", "oven"].sample }
   end
 

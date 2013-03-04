@@ -31,7 +31,7 @@ class Api::ErrandsController < ApplicationController
 
   def destroy
     @errand = Errand.find(params[:id])
-    @errand.destroy if @errand.requester_id = current_user.id
+    @errand.destroy if @errand.requester_id == current_user.id
     head :no_content
   end
 

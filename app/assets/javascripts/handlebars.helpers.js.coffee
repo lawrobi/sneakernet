@@ -6,3 +6,6 @@ Handlebars.registerHelper "today", () ->
 
 Handlebars.registerHelper "tomorrow", () ->
   window.tomorrow()
+
+Handlebars.registerHelper "default_destination", () ->
+  window.default_destination

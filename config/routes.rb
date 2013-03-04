@@ -6,7 +6,12 @@ Snickernet::Application.routes.draw do
   get "home/index"
   get "home/about"
   namespace :api do
-    resources :users
+    resources :users do
+      member do
+        get "accepted_errands"
+        get "requested_errands"
+      end
+    end
     resources :messages
     resources :places
     resources :errands

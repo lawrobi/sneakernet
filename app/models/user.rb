@@ -19,7 +19,25 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :bios
   attr_accessible :home_place_id, :name, :email, :password, :password_confirmation, :image_url
 
+  def requested_errands_completed
+    requested_errands.select { |errand|
+      errand.errand_offers.find {|eo| eo.status == "completed" }
+    }
+  end
+
+  def requested_errands_pending
+    requested_errands - requested_errands_completed
+  end
+
+  def errand_offers_completed
+    errand_offers_as_courier.select {|eo| eo.status == "completed"}
+  end
+
+  def errand_offers_pending
+    errand_offers_as_courier - errand_offers_completed
+  end
+
   def large_image_url
-    image_url.sub("type=square","type=large")
+    image_url.sub("type=square","type=large") if image_url
   end
 end

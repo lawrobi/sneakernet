@@ -20,12 +20,41 @@ describe Api::UsersController do
       get :show, :id => user.id
       u = JSON.parse(response.body)
       u["id"].should == user.id
-      u["requests_completed"].map {|e| e["id"]}.should == [completed_request.id]
-      u["requests_pending"].map {|e| e["id"]}.should == [pending_request.id]
+      u["requested_errands_completed"].map {|e| e["id"]}.should == [completed_request.id]
+      u["requested_errands_pending"].map {|e| e["id"]}.should == [pending_request.id]
       u["errand_offers_completed"].map {|eo| eo["id"]}
         .should == [completed_errand.id]
       u["errand_offers_pending"].map {|eo| eo["id"]}
         .should == [pending_errand.id]
+    end
+  end
+
+  describe "GET requested_errands" do
+    it "gets the users requested errands" do
+      completed_request = FactoryGirl.create(:errand, :requester => user)
+      FactoryGirl.create(:errand_offer, :status => "completed", :errand => completed_request)
+      pending_request = FactoryGirl.create(:errand, :requester => user)
+      get :requested_errands, :id => user.id
+      errands = JSON.parse(response.body)
+      errands["requested_errands_completed"].map {|e| e["id"] }.should ==
+        [completed_request.id]
+      errands["requested_errands_pending"].map {|e| e["id"] }.should ==
+        [pending_request.id]
+    end
+  end
+
+  describe "GET accepted_errands" do
+    it "gets the users accepted errand offers as courier" do
+      completed_errand = FactoryGirl.create(:errand_offer, :courier => user,
+                                            :status => "completed")
+      pending_errand = FactoryGirl.create(:errand_offer, :courier => user,
+                                          :status => "pending")
+      get :accepted_errands, :id => user.id
+      errands = JSON.parse(response.body)
+      errands["accepted_errands_completed"].map {|e| e["id"] }.should ==
+        [completed_errand.id]
+      errands["accepted_errands_pending"].map {|e| e["id"] }.should ==
+        [pending_errand.id]
     end
   end
 end

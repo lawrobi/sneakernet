@@ -12,6 +12,7 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
   routes:
     '': 'main'
     'about':'about'
+    'static/:page':'static'
     'summary':'summary'
     'errands':'errands'
     'request':'request'
@@ -37,3 +38,6 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
 
   about: ->
     @view = new Sneakernet.Views.StaticView({el:"#content", page:'about'})
+
+  static: (page) ->
+    @view = new Sneakernet.Views.StaticView({el:"#content", page:page})

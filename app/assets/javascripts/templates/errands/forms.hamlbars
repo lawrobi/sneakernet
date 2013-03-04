@@ -50,7 +50,7 @@
             .columns.large-1
               &nbsp;
           .row
-            .large-3.columns.custom
+            .large-3.columns
               %label{:for => 'weightSelect'} Approx. Weight
               %select#weightSelect.medium
                 %option Less than 1 lbs

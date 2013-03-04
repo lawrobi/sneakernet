@@ -8,9 +8,12 @@
   %section.top-bar-section
     %ul.right
       %li.divider
-      %li.hide
-        %a.link{:href => '/about'}
-          About
+      %li
+        %a.link{:href => '/errands'}
+          Browse Errands
+      %li
+        %a.link{:href => '/request'}
+          Post Request
       {{#if current_user}}
       %li.usermeta
         %a{:href => '#'}

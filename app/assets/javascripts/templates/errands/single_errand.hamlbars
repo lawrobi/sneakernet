@@ -1,6 +1,16 @@
-%h2 {{summary}}
+.intro
+  .row
+.row.pane.first
 
-%p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
-%p {{format_date deadline}}
-%p $250
+  %h2 {{summary}}
+
+  %p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
+  %p {{format_date deadline}}
+  %p $250
+
+  .row
+    .columns.large-4
+      %h3 Bid of $200.00
+    .columns.large-8
+      %a.button.radius.success{:href => '#'} Accept Request
 

@@ -9,21 +9,22 @@
     %h4 Team
     %p We're based in San Francisco, CA. We like burritos and bicycles.
 
-    %ul
+    %ul.team
       %li
         %p
-          %b Gabe
+          %b Gabe Kopley
         %p Back-End Developer
       %li
         %p
-          %b Michael
+          %b Michael Makarov
         %p Front-End Developer
       %li
         %p
-          %b Vasily
+          %b Vasily Myazin
         %p Interaction Engineer
       %li
         %p 
-          %b Johnson
+          %b Johnson Chen
         %p Interface Designer
 
+    %p Special thanks for Neharika.

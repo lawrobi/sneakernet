@@ -38,7 +38,6 @@ describe Api::UsersController do
       errands = JSON.parse(response.body)
       errands.map {|e| e["id"] }.should ==
         [completed_request.id, pending_request.id]
-      binding.pry
     end
   end
 
@@ -52,7 +51,6 @@ describe Api::UsersController do
       errands = JSON.parse(response.body)
       errands.map {|e| e["id"] }.should =~
         [completed_errand.id, pending_errand.id]
-      binding.pry
     end
   end
 end

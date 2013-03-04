@@ -1,4 +1,5 @@
 class Api::MessagesController < ApplicationController
+  before_filter :authenticate_user!, :only => [:create, :update, :destroy]
 
   def index
     @messages = Message.to_user(current_user) 

@@ -1,4 +1,6 @@
 class Api::ErrandOffersController < ApplicationController
+  before_filter :authenticate_user!, :only => [:create, :update, :destroy]
+
   def index
     @errand_offers = ErrandOffer.joins(:errand)
     if params[:minimum_distance].present?

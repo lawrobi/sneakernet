@@ -1,4 +1,6 @@
 class Api::OffersController < ApplicationController
+  before_filter :authenticate_user!, :only => [:create, :update, :destroy]
+
   def index
     @offers = Offer.scoped
     if params[:source_place_id].present?

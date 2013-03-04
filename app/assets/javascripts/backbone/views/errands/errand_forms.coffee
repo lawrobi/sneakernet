@@ -47,6 +47,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
   next_form: ->
     @current_form = @current_form + 1
     @switch_form()
+    false
 
   submit_form: ->
     fields = $("#request_form").find("input")
@@ -60,7 +61,6 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
     errand.arrival_place.display_name = $("#s2id_deliver_to .select2-choice span").text()
     errand.source_place.display_name = $("#s2id_deliver_from .select2-choice span").text()
 
-
     # if current user
     if window.current_user
       $.cookie("errand_ready", JSON.stringify(errand), 1)
@@ -71,7 +71,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
       # if not
       $.cookie("errand_ready", JSON.stringify(errand), 1)
       $('a.login-link').trigger('click')
-
+    false
 
   render: ->
     @$el.html HandlebarsTemplates['errands/forms']({errand:@errand})

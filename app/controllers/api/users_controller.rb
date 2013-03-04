@@ -16,7 +16,7 @@ class Api::UsersController < ApplicationController
       :requests_pending => requests_pending,
       :errand_offers_completed => errand_offers_completed,
       :errand_offers_pending => errand_offers_pending,
-      :large_image => @user.large_image
+      :large_image_url => @user.large_image_url
     ).to_json
   end
 

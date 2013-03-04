@@ -52,7 +52,7 @@ $(document).on "keyup", "input.choose_place", (_.debounce ->
 )
 
 
-window.select_city = (obj) ->
+window.select_city = (obj, name) ->
 
   placeFormatResult = (place) ->
     "#{place.display_name}"
@@ -72,3 +72,7 @@ window.select_city = (obj) ->
     formatSelection: placeFormatSelection
     escapeMarkup: (m) ->
       m
+
+
+  if name
+    $("#s2id_deliver_to .select2-choice span").text(name)

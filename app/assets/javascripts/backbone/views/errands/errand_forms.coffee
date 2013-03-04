@@ -7,12 +7,17 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
   get: ->
 
   initialize: ->
-    @current_form = 1
-    @render()
-    @switch_form()
     @errand = JSON.parse($.cookie("errand"))
     if not @errand
       Sneakernet.router.navigate("", {trigger:true})
+
+
+    @current_form = 1
+
+    @render()
+    select_city("#deliver_to", @errand.arrival_place.display_name)
+    @switch_form()
+
 
 
   next_form: ->

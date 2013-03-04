@@ -14,15 +14,15 @@
               %input{:name => '', :placeholder => "Large envelope", :type => "text", 'data-field' => 'summary'}/
             .large-3.columns
               %label By Date
-              %input{:name => '', :placeholder => "4/12/13", :type => "text", :value => "4/12/13", 'data-field' => 'deadline'}/
+              %input{:name => '', :placeholder => "4/12/13", :type => "text", :value => "{{errand.deadline}}", 'data-field' => 'deadline'}/
           .row
             .large-12.columns
               %label Street Address
               %input{:name => '', :placeholder => "123 Main St", :type => "text", 'data-field' => 'street_address'}/
           .row
             .large-9.columns
-              %label Destination City
-              %input#deliver_to{:name => '', :placeholder => "New York, NY", :type => "text", :value => "New York, NY", 'data-field' => 'arrival_place_id'}/
+              %label Destination City {{errand.arrival_place.display_name}}
+              %input#deliver_to{:name => '', :placeholder => "Fuck", :type => "text", :value => "{{errand.arrival_place_id}}", 'data-field' => 'arrival_place_id'}/
             .large-3.columns
               %label Zip Code
               %input{:name => '', :placeholder => "10000", :type => "text", 'data-field' => 'postal_code'}/

@@ -1,7 +1,7 @@
 .intro
   .row
     %h2
-      I might be travelling from
+      You might be travelling from
       %br/
       %span.faux-input
         San Francisco

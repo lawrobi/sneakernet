@@ -5,7 +5,7 @@
 
 .form.initial
   .row
-    %h3 I need stuff delivered
+    %h3 You need stuff delivered
     %form.custom{:name => 'errand_new'}
       %fieldset
         .row
@@ -20,7 +20,7 @@
               %a.button.success.radius.continue{:href => '#'}
                 Start a Request
   .row
-    %h3 I'm ready to take stuff somewhere
+    %h3 You're ready to take stuff somewhere
     %form.custom{:name => 'errand_new'}
       %fieldset
         .row

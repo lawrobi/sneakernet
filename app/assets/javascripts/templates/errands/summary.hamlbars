@@ -4,7 +4,7 @@
       .columns.large-10
         .row.top-heading-box
           %h2
-            Review Your Errand
+            Review Your Request
 
         .row.summary
           %p

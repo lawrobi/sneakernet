@@ -43,6 +43,10 @@ a {
 .text-right {
   text-align: right;
 }
+.hide {
+  position: fixed;
+  left: -4000px;
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Droid Serif', "Times New Roman", Georgia, sans-serif;

@@ -26,7 +26,7 @@
           %h3 You're ready to take stuff from:
           .large-9.columns
             %label I'm currently in
-            %input.errand_place1{:name => 'errand[place1]', :placeholder => "San Francisco, CA", :type => "text"}/
+            %input.errand_place1{:name => 'errand[place1]', :placeholder => "San Francisco, CA", :value => "San Francisco, CA", :type => "text"}/
           .large-3.columns
             .row.collapse
               %a.link.button.radius.show-errands{:href => '/errands'}

@@ -14,6 +14,7 @@ class Sneakernet.Views.HomeView extends Backbone.View
 
   events:
     'click .continue': 'request'
+    'click .show-errands':'errands'
 
   render: ->
     @$el.html HandlebarsTemplates['home/index']({})
@@ -34,3 +35,20 @@ class Sneakernet.Views.HomeView extends Backbone.View
 
     $.cookie("errand", JSON.stringify(errand), 1)
     Sneakernet.router.navigate("request", {trigger:true})
+
+  errands: (e) ->
+    e.preventDefault()
+    errand = {}
+    errand.deadline = $("#errand_deadline").val()
+    errand.arrival_place_id = $("#deliver_to").val()
+    errand.arrival_place = {}
+    errand.arrival_place.display_name = $("#s2id_deliver_to .select2-choice span").text()
+    errand.source_place_id = $("#deliver_from").val()
+    errand.source_place = {}
+    errand.source_place.display_name = $("#s2id_deliver_from .select2-choice span").text()
+    if not errand.deadline
+      errand.deadline = tomorrow()
+
+    $.cookie("errand", JSON.stringify(errand), 1)
+    Sneakernet.router.navigate("errands", {trigger:true})
+    false

@@ -6,12 +6,10 @@
     %br/
     from
     %span.faux-input
-      San Francisco
-      //%input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_from'}
+      %input{:type => 'text', :placeholder => 'San Francisco', :id => 'deliver_from', :value => '{{default_source_id}}'}
     to 
     %span.faux-input
-      Anywhere
-      //%input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_to'}
+      %input{:type => 'text', :placeholder => 'San Francisco', :id => 'deliver_to', :value => '{{default_destination_id}}'}
   %h3 Care to deliver some stuff?
 
 .row.pane.errands-list

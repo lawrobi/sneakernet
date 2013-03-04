@@ -47,11 +47,8 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
       errand_id:id
 
   errands: ->
-    @errands = new Sneakernet.Collections.Errands()
-    @errands.fetch()
     @view = new Sneakernet.Views.ErrandsView
       el:"#content"
-      collection: @errands
 
   about: ->
     @view = new Sneakernet.Views.StaticView({el:"#content", page:'about'})

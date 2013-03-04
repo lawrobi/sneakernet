@@ -2,8 +2,11 @@
 class Sneakernet.Views.RequestedErrand extends Backbone.View
   # tagName: "tr"
   events:
-    'click .get':'get'
-  get: ->
+    'click .accept':'accept'
+
+  accept: ->
+    #@model.accept()
+    false
 
   initialize: ->
     @model.on 'change', @render, @

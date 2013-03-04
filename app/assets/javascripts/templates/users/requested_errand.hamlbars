@@ -35,5 +35,6 @@
           %td Pro
           %td ${{bid}}
           %td
-            %a.button.radius.small.success{:href => '#'} Accept
+            %a.button.radius.small.success.accept{:href => '#'} Accept
+            %h5 {{Status}}
         {{/each}}

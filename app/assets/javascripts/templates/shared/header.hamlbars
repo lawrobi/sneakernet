@@ -16,6 +16,6 @@
         %a{:href => '#'}
           Logged in with: {{current_user.name}}
         {{else}}
-        %a.button.small.success.radius{"data-reveal-id" => "loginModal", :href => "#"}
+        %a.login-link.button.small.success.radius{"data-reveal-id" => "loginModal", :href => "#"}
           Sign In
         {{/if}}

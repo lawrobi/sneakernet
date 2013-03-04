@@ -35,7 +35,11 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
       alert window.current_user.name
       collection = new Sneakernet.Collections.Errands()
       collection.create(errand)
-    # if not
+    else
+      # if not
+      $.cookie("errand_ready", JSON.stringify(errand), 1)
+      $('a.login-link').trigger('click')
+
 
   render: ->
     @$el.html HandlebarsTemplates['errands/forms']({errand:@errand})

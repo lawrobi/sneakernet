@@ -26,20 +26,14 @@
           %th Bid offer
           %th Action
       %tbody
+        {{#each errand_offers}}
         %tr
           %td
             .user-photo
               %img{:src => 'image_url'}
-            Johnson Chen
+            {{courier.name}}
           %td Pro
-          %td $200
-          %td 
-            %a.button.radius.small.success{:href => '#'} Accept
-        %tr
+          %td ${{bid}}
           %td
-            .user-photo
-            Barbara Busch
-          %td Pro
-          %td $200
-          %td 
             %a.button.radius.small.success{:href => '#'} Accept
+        {{/each}}

@@ -80,7 +80,7 @@
             .row
               .large-9.columns
                 %label City {{errand.arrival_place.display_name}}
-                %input#deliver_to{:name => '', :placeholder => "", :type => "text", :value => "{{errand.arrival_place_id}}", 'data-field' => 'arrival_place_id'}/
+                %input#deliver_to{:name => '', :placeholder => "", :type => "text", :value => "{{errand.source_place_id}}", 'data-field' => 'source_place_id'}/
               .large-3.columns
                 %label Zip Code
                 %input{:name => '', :placeholder => "10000", :type => "text", 'data-field' => 'postal_code'}/

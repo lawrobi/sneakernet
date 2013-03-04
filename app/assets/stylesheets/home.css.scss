@@ -332,6 +332,8 @@ form {
   }
 }
 .tab-pill {
+  display: inline-block;
+  width: 100%;
   background: #f0f0f0;
   padding: 15px;
   text-align: center;
@@ -341,6 +343,7 @@ form {
   &.selected {
     background: $dark-color;
     color: #fff;
+    cursor: default;
   }
 }
 

@@ -9,10 +9,10 @@
     .columns.large-12
       %nav.row
         .columns.large-4
-          .tab-pill.selected
+          %a.tab-pill.selected{:href => '#'}
             Your Delivery Requests (1)
         .columns.large-4
-          .tab-pill
+          %a.tab-pill{:href => '#'}
             Your Jobs (2)
         .columns.large-4 &nbsp;
       .row

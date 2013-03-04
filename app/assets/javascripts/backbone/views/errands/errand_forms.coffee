@@ -34,7 +34,8 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
       max: 42
       step: 1
       slide: (event, ui) ->
-        $("#amount").text "$" + (50 + ui.value * 5)
+        $("#amount").text "$" + (50 + ui.value * 5) + '.00'
+        $('#selected-date').text 'April 15, 2013'
 
     select_city("#deliver_to", @errand.arrival_place.display_name)
     select_city("#deliver_from", @errand.source_place.display_name)

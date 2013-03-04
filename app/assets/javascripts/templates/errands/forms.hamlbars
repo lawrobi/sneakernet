@@ -89,7 +89,7 @@
           .row.price-est-section
             %p
               You want your item of roughly horse size, weighing less than 10 lbs, delivered 2100 miles by
-              %b March 11, 2013
+              %b#selected-date March 11, 2013
             .columns.large-5
               #amount.price.large $250.00
               %p.note
@@ -97,6 +97,8 @@
             .columns.large-7
               .slider
                 #date-slider
+                .date.start 3/11
+                .date.end 4/1
                 %a.how{:href => '#'}
                   How is this estimated?
           .row.text-center

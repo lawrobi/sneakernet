@@ -340,16 +340,27 @@ form {
     padding-bottom: 40px;
     .slider {
       position: relative;
-      min-height: 87px;
+      min-height: 77px;
       .ui-slider {
         margin-top: 28px;
+      }
+      .date {
+        margin-top: 10px;
+        &.start {
+          float: left;
+          margin-left: -7px;
+        }
+        &.end {
+          float: right;
+          margin-right: -7px;
+        }
       }
     }
     .how {
       position: absolute;
       bottom: 0;
       right: 0;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   .agreement-box {

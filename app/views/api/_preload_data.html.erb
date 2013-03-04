@@ -1,7 +1,7 @@
 <script>
     <% if user_signed_in? %>
         window.current_user = <%= current_user.to_json(:methods => []).html_safe %>;
+    <% end %>
         window.default_source = <%= Place.where(:city => "San Francisco")[0].to_json.html_safe %>;
         window.default_destination = <%= Place.where(:city => "New York")[0].to_json.html_safe %>;
-    <% end %>
 </script>

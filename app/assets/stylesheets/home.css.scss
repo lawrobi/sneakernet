@@ -644,9 +644,12 @@ table {
 }
 .team {
   li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     p {
       margin-bottom: 2px;
+      b {
+        font-size: 120%;
+      }
     }
   }
 }

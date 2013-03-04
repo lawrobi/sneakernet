@@ -395,6 +395,49 @@ form {
 }
 
 /****************************************
+/* User Profile
+/****************************************/
+
+.user-header {
+  h2 {
+    margin-bottom: 5px;
+  }
+  .user-photo {
+    float: left;
+    margin: 0 20px 0 0;
+  }
+  .stats {
+    ul {
+      li {
+        list-style: none;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    }
+  }
+  p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .location {
+    color: #aaa;
+  }
+  .achievements {
+    min-height: 30px;
+  }
+}
+.user-photo {
+  width: 90px;
+  height: 90px;
+  background: #ccc;
+}
+
+/****************************************
+/* /User Profile
+/****************************************/
+
+
+/****************************************
 /* Static Pages
 /****************************************/
 

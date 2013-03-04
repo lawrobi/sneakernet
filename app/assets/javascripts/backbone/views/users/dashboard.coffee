@@ -4,10 +4,15 @@ class Sneakernet.Views.Dashboard extends Backbone.View
   initialize: (options) ->
     @requested_errands = new Sneakernet.Collections.Errands()
     @requested_errands.fetch()
+    @accepted_errands = new Sneakernet.Collections.Errands()
+    @accepted_errands.fetch()
     @render()
-    @view = new Sneakernet.Views.RequestedErrands
+    @requested_errands_view = new Sneakernet.Views.RequestedErrands
       el:"#requested_errands"
       collection: @requested_errands
+    @accepted_errands_view = new Sneakernet.Views.AcceptedErrands
+      el:"#accepted_errands"
+      collection: @accepted_errands
 
 
   render: ->

@@ -1,0 +1,15 @@
+%h2
+  Your Errands That You've taken, bro
+%table
+  %thead
+    %tr
+      %th
+        Errand Requests Ending Soon
+        %span (3)
+      %th
+        Package Size
+      %th
+        By Date
+      %th
+        Reward
+  %tbody.errands-view

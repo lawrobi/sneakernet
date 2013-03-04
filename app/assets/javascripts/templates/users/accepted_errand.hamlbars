@@ -1,0 +1,9 @@
+%td
+  %a.link{:href => "{{link_to 'errands' this}}"}
+    %p.title {{summary}}
+    %p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
+%td {{size}}
+%td
+  {{format_date deadline}}
+%td $250
+

@@ -91,7 +91,7 @@
               You want your item of roughly horse size, weighing less than 10 lbs, delivered 2100 miles by
               %b March 11, 2013
             .columns.large-5
-              %input#amount.price.large{:name => '', :value => "$250.00", :type => "text", 'data-field' => 'estimated_price'}
+              #amount.price.large $250.00
               %p.note
                 Suggested Price. Final price will be agreed between you and the bidder.
             .columns.large-7

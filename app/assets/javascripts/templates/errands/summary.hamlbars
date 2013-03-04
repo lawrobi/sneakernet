@@ -35,6 +35,8 @@
         .row.text-center
           %a.button.radius.submit{"data-reveal-id" => "requestedSuccessModal", :href => "#"} Submit Your Request
 
+          %a.button.radius.hide.show-success{"data-reveal-id" => "requestedSuccessModal", :href => "#"} Success
+
 #requestedSuccessModal.reveal-modal.medium
   %h2.text-center Your Request Has Been Posted
   .row.login-options.text-center

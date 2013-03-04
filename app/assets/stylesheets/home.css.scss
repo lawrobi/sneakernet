@@ -20,8 +20,9 @@
 /* /Mixins
 /****************************************/
 
-$highlight-color: #CD4900;
-$light-gray: #c7c7c7;
+$highlight-color: #7d2222;
+$light-color: #c5d5d0;
+$light-color-2: #bfddd5;
 $dark-color: #222;
 
 body {
@@ -38,6 +39,9 @@ a {
 }
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -77,14 +81,15 @@ ul, ol {
 
 #content {
   min-height: 400px;
-  background-color: $light-gray;
+  background-color: $light-color;
 }
 
 .intro {
   padding: 60px 0;
   margin: 0 0;
   &.home {
-    background-image: url('/assets/bg-map-gray.jpg');
+    background: url("/assets/bg-city.jpg") center -50px;
+    min-height: 450px;
   }
   h2 {
     margin: 0 0 5px;
@@ -101,9 +106,27 @@ ul, ol {
 .form {
   margin: 0;
   &.initial {
-    padding: 50px 0;
+    padding: 50px 0 0;
+    margin-top: -260px;
+    fieldset {
+      background: #fbf1dd;
+      padding: 25px 45px;
+      box-shadow: 0 0 8px rgba(0,0,0,.5);
+      label { display: none }
+      &.for-couriers {
+        background: #a2c6b9;
+      }
+    }
+    > .row {
+      margin-bottom: 20px;
+    }
+    .button {
+      margin-top: 0;
+    }
   }
   .button {
+    padding-top: 16px;
+    padding-bottom: 16px;
     margin-top: 21px;
   }
   fieldset {
@@ -112,6 +135,9 @@ ul, ol {
     margin: 40px 0 0;
     &:first-child {
       margin-top: 0;
+    }
+    h3 {
+      font-size: 21px;
     }
   }
   .flabel {
@@ -134,14 +160,18 @@ form {
   }
 }
 .more-content {
-  background-color: #E3E3E3;
-  padding: 80px 0;
+  // background-color: $light-color-2;
+  padding: 40px 0 80px 0;
 }
 .circle {
   border-radius: 50%;
   width: 120px;
   height: 120px; 
   background-color: #fff;
+  &.large {
+    width: 180px;
+    height: 180px;
+  }
 }
 .login-options {
   h5 {
@@ -305,13 +335,26 @@ form {
     margin: 20px 0 -16px;
     font-size: 20px;
     span {
-      background-color: $light-gray;
+      background-color: $light-color;
       position: relative;
       top: -16px;
       padding: 0 10px;
     }
   }
 }
+
+/****************************************
+/* Static Pages
+/****************************************/
+
+.static-content {
+  padding: 50px 0 25px;
+}
+
+/****************************************
+/* /Static Pages 
+/****************************************/
+
 
 /****************************************
 /* Graphic Buttons

@@ -1,60 +1,46 @@
-.intro
+.intro.home
   .row
     %h2 It's like Lyft for Courier Services
     %h3 Get your stuff delivered in the US by reliable runners at affordable rates
 
 .form.initial
   .row
-    %h3 You need stuff delivered
     %form.custom{:name => 'errand_new'}
       %fieldset
         .row
-          .large-6.columns
+          %h3 You need stuff delivered to:
+          .large-7.columns
             %label My delivery destination
             %input#deliver_to.errand_place1{:name => 'errand[place1]', :placeholder => "New York, NY", :type => "text"}/
           .large-2.columns
             %label Date
             %input#errand_deadline{:name => 'errand[deadline]', :placeholder => "{{tomorrow}}", :type => "text"}/
-          .large-4.columns
+          .large-3.columns
             .row.collapse
               %a.button.success.radius.continue{:href => '#'}
                 Start a Request
   .row
-    %h3 You're ready to take stuff somewhere
     %form.custom{:name => 'errand_new'}
-      %fieldset
+      %fieldset.for-couriers
         .row
-          .large-8.columns
+          %h3 You're ready to take stuff from:
+          .large-9.columns
             %label I'm currently in
             %input.errand_place1{:name => 'errand[place1]', :placeholder => "San Francisco, CA", :type => "text"}/
-          .large-4.columns
+          .large-3.columns
             .row.collapse
               %a.link.button.radius.show-errands{:href => '/errands'}
                 Browse Errands
 
 .more-content
   .row
-    .columns.large-2
-      &nbsp;
-    .columns.large-8.text-center
-      %h3 Unique value of crowd-sourced delivery services
+    .columns.large-8.text-right
+      %h3 How Does It Work?
       %p
         Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-    .columns.large-2
-      &nbsp;
-  .row
-    .columns.large-1
-      &nbsp;
-    .columns.large-2
-      .circle
-    .columns.large-2
-      .circle
-    .columns.large-2
-      .circle
-    .columns.large-2
-      .circle
-    .columns.large-2
-      .circle
-    .columns.large-1
-      &nbsp;
+      %p
+        %a.link{:href => '/about'} Read more in About &#8594;
+    .columns.large-4
+      .circle.large
+
 

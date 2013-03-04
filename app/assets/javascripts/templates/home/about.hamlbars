@@ -1,9 +1,12 @@
-.row
-  %h1 About {{sitename}}
-  %p Obi-Wan is here. The Force is with him. Partially, but it also obeys your commands. Your eyes can deceive you. Don't trust them.
-  %h4 The Rebel Force
-  %p Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. What!? All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Your eyes can deceive you. Don't trust them. Don't underestimate the Force.
-  %ol
-    %li Ye-ha!
-    %li He is here.
-    %li I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to Alderaan.
+.row.static-content
+  .columns.large-2
+    &nbsp;
+  .columns.large-10
+    %h2 About {{sitename}}
+    %p Obi-Wan is here. The Force is with him. Partially, but it also obeys your commands. Your eyes can deceive you. Don't trust them.
+    %h4 The Rebel Force
+    %p Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. What!? All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Your eyes can deceive you. Don't trust them. Don't underestimate the Force.
+    %ol
+      %li Ye-ha!
+      %li He is here.
+      %li I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to Alderaan.

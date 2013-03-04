@@ -3,7 +3,7 @@
     .row
   .row.pane.first
     %h2
-      All Your Requests &amp; Offers
+      All Your Delivery Requests &amp; Jobs
 
   .row.pane.errands-list
     .columns.large-12

@@ -33,7 +33,15 @@
               %a{:href => '#'} Read the terms here
 
         .row.text-center
-          %a.button.radius.submit Submit Your Request
+          %a.button.radius.submit{"data-reveal-id" => "requestedSuccessModal", :href => "#"} Submit Your Request
+
+#requestedSuccessModal.reveal-modal.medium
+  %h2.text-center Your Request Has Been Posted
+  .row.login-options.text-center
+    %h5.lead You will be notified once it's accepted by one of our delivery people
+    %hr/
+    %a.link.button.success.radius{:href => '/'} Okay!
+  %a.close-reveal-modal &#215;
 
 / title: {{errand.summary}}
 / from: {{errand.source_place.display_name}}

@@ -10,9 +10,10 @@ class Sneakernet.Views.ErrandSummary extends Backbone.View
     #select_city("#deliver_to", @errand.arrival_place.display_name)
 
   events:
-    'click .submit':'submit'
+    'click .submit': 'submit'
 
   submit: ->
+    
     collection = new Sneakernet.Collections.Errands()
     collection.create(@errand)
 

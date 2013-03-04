@@ -14,7 +14,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
 
     @current_form = 1
 
-    if not @errand.source_place
+    if not @errand.source_place or @errand.source_place == null
       @errand.source_place = {}
       @errand.source_place.display_name = default_source.display_name
       @errand.source_place_id = default_source.id

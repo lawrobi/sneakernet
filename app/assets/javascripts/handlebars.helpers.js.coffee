@@ -18,3 +18,11 @@ Handlebars.registerHelper "default_destination_id", () ->
 
 Handlebars.registerHelper "default_source_id", () ->
   window.default_source.id
+
+Handlebars.registerHelper "format_date", (date) ->
+  if date
+    moment(date).format('LL')
+  else
+    "No date"
+
+

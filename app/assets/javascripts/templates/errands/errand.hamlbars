@@ -1,3 +1,7 @@
-%h5 Errand
-{{summary}}
-{{arrival_place.display_name}}
+%td
+  %p.title {{summary}}
+  %p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
+%td Large
+%td {{deadline}}
+%td $250
+

@@ -10,7 +10,7 @@ class Sneakernet.Views.ErrandsView extends Backbone.View
 
   addOne: (errand) ->
     view = new Sneakernet.Views.ErrandView(model: errand)
-    ($ ".errands-list").append view.render().el
+    ($ ".errands-view").append view.render().el
 
   render: ->
     @$el.html HandlebarsTemplates['errands/errands']()

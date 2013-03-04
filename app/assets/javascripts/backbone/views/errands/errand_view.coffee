@@ -1,6 +1,6 @@
 
 class Sneakernet.Views.ErrandView extends Backbone.View
-
+  tagName: "tr"
   events:
     'click .get':'get'
   get: ->

@@ -3,7 +3,7 @@
     %li.name
       %h1
         %a.link{:href => '/'}
-          {{sitename}}
+          %img{:src => '/assets/site-logo.png', :title => '{{sitename}}'}
 
   %section.top-bar-section
     %ul.right

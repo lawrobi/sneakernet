@@ -9,9 +9,11 @@
       %fieldset
         .row
           %h3 You need stuff delivered to:
-          .large-7.columns
+          .large-6.columns
             %label My delivery destination
             %input#deliver_to.errand_place1{:name => 'errand[place1]', :placeholder => "New York, NY", :value => '{{default_destination_id}}', :type => "text"}/
+          .large-1.columns
+            .flabel by
           .large-2.columns
             %label Date
             %input#errand_deadline{:name => 'errand[deadline]', :placeholder => "{{tomorrow}}", :type => "text"}/

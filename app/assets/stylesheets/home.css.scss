@@ -40,6 +40,10 @@ p {
 a {
   color: $highlight-color;
 }
+
+.dashboard-errands {
+  display:none;
+}
 .row.full-width {
   max-width: 100%;
 }

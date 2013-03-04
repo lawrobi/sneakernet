@@ -9,14 +9,14 @@
     .columns.large-12
       %nav.row
         .columns.large-4
-          %a.tab-pill.selected{:href => '#'}
+          %a.tab-pill.selected{:href => '#', 'data-tab' => 'requested_errands'}
             Your Delivery Requests (1)
         .columns.large-4
-          %a.tab-pill{:href => '#'}
+          %a.tab-pill{:href => '#', 'data-tab' => 'accepted_errands'}
             Your Jobs (2)
         .columns.large-4 &nbsp;
       .row
         .requested-errands-section
-          #requested_errands
+          #requested_errands.dashboard-errands
         .accepted-errands-section
-          #accepted_errands
+          #accepted_errands.dashboard-errands

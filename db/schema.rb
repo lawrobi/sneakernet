@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130303230554) do
+ActiveRecord::Schema.define(:version => 20130304014459) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20130303230554) do
     t.integer  "postal_code"
     t.string   "street_address"
     t.integer  "distance"
+    t.string   "image_url"
   end
 
   create_table "messages", :force => true do |t|

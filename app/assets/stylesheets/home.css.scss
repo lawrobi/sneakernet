@@ -294,7 +294,7 @@ form {
   }
 }
 .faux-input {
-  padding: 0 15px;
+  padding: 0;
   background-color: $dark-color;
   color: #fff;
   text-shadow: none;
@@ -303,6 +303,9 @@ form {
   font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300;
   @include border-radius(4px);
+  .select2-container .select2-choice span {
+    font-size: 32px;
+  }
 }
 .errands-list {
   padding-top: 0;

@@ -1,2 +1,2 @@
 Handlebars.registerHelper "sitename", () ->
-  "Runners Inc."
+  "Bring My Stuff"

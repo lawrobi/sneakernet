@@ -1,9 +1,9 @@
-.intro
-  .row
-    %h2 Add more details to your item delivery request
-
 %form#request_form.form
   .forms{'data-index' => '1'}
+
+    .intro
+      .row
+        %h2 Add more details to your item delivery request
 
     %fieldset
       .row
@@ -67,10 +67,36 @@
                 Continue
 
   .forms{'data-index' => '2'}
+    .intro
+      .row
+        .columns.large-10
+          .row.top-heading-box
+            %h2
+              Item Delivery Request Price Quote
+            %p
+              You want your item of roughly horse size, weighing less than 10 lbs, delivered 2100 miles by
+              %b March 11, 2013
+
+          .row.price-est-section
+            .columns.large-5
+              .price.large $250.00
+              %p.note
+                Suggested Price. Final price will be agreed between you and the bidder.
+            .columns.large-7
+              .slider
+                %a.how{:href => '#'}
+                  How is this estimated?
+          .row
+            %h4.form-heading
+              %span User Agreement and Terms of Service
+            .agreement-box
+              %input{:type => 'checkbox', :checked => 'checked'}
+              %p
+                By checking the checkbox you agree with our terms of services. To ensure successful delivery we have comprehensive terms or service and urge you read them through. Your package will be ensured for up to USD 500,000. Read the
+
     .row
-      World
       .next_form
-        %a.button.radius Continue
+        %a.button.radius Review Your Request
 
   .forms{'data-index' => '3'}
     .row

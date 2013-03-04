@@ -21,6 +21,7 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
   main: ->
     @view = new Sneakernet.Views.HomeView({el:"#content"})
     select_city("#deliver_to")
+    select_city("#deliver_from", default_destination.display_name)
 
 
   request: ->

@@ -14,8 +14,6 @@ class Sneakernet.Views.Dashboard extends Backbone.View
     @requested_errands_view = new Sneakernet.Views.RequestedErrands
       el:"#requested_errands"
       collection: @requested_errands
-    @requested_errands.on 'reset', @showTab, @
-    @accepted_errands.on 'reset', @showTab, @
 
     @accepted_errands_view = new Sneakernet.Views.AcceptedErrands
       el:"#accepted_errands"

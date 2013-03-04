@@ -10,7 +10,7 @@ class Sneakernet.Views.AcceptedErrands extends Backbone.View
 
   addOne: (errand) ->
     view = new Sneakernet.Views.RequestedErrand(model: errand)
-    ($ ".errands-view").append view.render().el
+    @$el.find(".errands-view").append view.render().el
 
   render: ->
     json = {l: @collection.models.length}

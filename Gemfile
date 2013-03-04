@@ -20,7 +20,7 @@ group :development do
 end
 group :assets do
   gem 'momentjs-rails'
-  gem 'jquery-ui-rails'
+  gem 'jquery-ui-rails', '>= 3.0.1'
   gem "select2-rails"
   gem 'sass-rails',   '~> 3.2.3'
   gem "rails-backbone" # lest back bone that shit

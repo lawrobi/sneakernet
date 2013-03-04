@@ -31,3 +31,9 @@ Handlebars.registerHelper "link_to", (type, obj) ->
 Handlebars.registerHelper "timeAgo", (date) ->
   date = moment(date)
   date.fromNow()
+
+Handlebars.registerHelper "link_to_current_user", () ->
+  "/users/#{window.current_user.id}"
+
+Handlebars.registerHelper "current_user_name", () ->
+  window.current_user.name

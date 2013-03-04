@@ -16,7 +16,7 @@
           Post Request
       {{#if current_user}}
       %li.usermeta
-        %a.link{:href => "{{link_to 'users' current_user}}"}
+        %a.link{:href => "/dashboard"}
           %img{:src => "{{current_user.image_url}}"}
           {{current_user.name}}
       {{else}}

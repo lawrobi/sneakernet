@@ -13,6 +13,7 @@ class Sneakernet.Views.AcceptedErrands extends Backbone.View
     ($ ".errands-view").append view.render().el
 
   render: ->
-    @$el.html HandlebarsTemplates['users/accepted_errands']()
+    json = {l: @collection.models.length}
+    @$el.html HandlebarsTemplates['users/accepted_errands'](json)
     @collection.each(@addOne, @)
     @

@@ -11,7 +11,7 @@
       %li.hide
         %a.link{:href => '/about'}
           About
-      %li
+      %li.usermeta
         {{#if current_user}}
         %a{:href => '#'}
           %img{:src => "{{current_user.image_url}}"}

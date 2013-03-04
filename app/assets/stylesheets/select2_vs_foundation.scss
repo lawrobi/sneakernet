@@ -18,4 +18,13 @@ input.select2-input {
   .pika-button:hover {
     background-color: grey !important;
   }
+  table {
+    width: inherit;
+    tr:hover td {
+      background-color: inherit;
+    }
+    th:first-child {
+      width: inherit;
+    }
+  }
 }

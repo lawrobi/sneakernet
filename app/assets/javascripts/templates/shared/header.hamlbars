@@ -11,12 +11,13 @@
       %li.hide
         %a.link{:href => '/about'}
           About
+      {{#if current_user}}
       %li.usermeta
-        {{#if current_user}}
         %a{:href => '#'}
           %img{:src => "{{current_user.image_url}}"}
           {{current_user.name}}
-        {{else}}
+      {{else}}
+      %li.has-form
         %a.login-link.button.small.success.radius{"data-reveal-id" => "loginModal", :href => "#"}
           Sign In
-        {{/if}}
+      {{/if}}

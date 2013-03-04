@@ -23,7 +23,7 @@
             {{errand.deadline}}
           %p
             %span Sugguested Amount:
-            $250.00
+            $ {{errand.estimated_price}}
 
         .row
           %h4.form-heading

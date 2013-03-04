@@ -1,6 +1,7 @@
 %td
-  %p.title {{summary}}
-  %p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
+  %a{:href => "{{link_to 'errands' this}}"}
+    %p.title {{summary}}
+    %p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
 %td Large
 %td
   {{format_date deadline}}

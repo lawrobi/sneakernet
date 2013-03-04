@@ -1,5 +1,6 @@
 %li
   %h4.title
+    %span.status Open for bidding
     %a.link{:href => "{{link_to 'errands' this}}"} {{summary}}
   %p.subline
     From
@@ -20,17 +21,20 @@
       %thead
         %tr
           %th
-            Errand Requests Ending Soon
-            %span (3)
-          %th
-            Package Size
-          %th
-            By Date
-          %th
-            Reward
+            Delivery Person's Name
+          %th Experience
+          %th Bid offer
+          %th Action
       %tbody
         %tr
-          %td a
-          %td a
-          %td a
-          %td a
+          %td Johnson Chen
+          %td Pro
+          %td $200
+          %td 
+            %a.button.radius.small.success{:href => '#'} Accept
+        %tr
+          %td Barbara Busch
+          %td Pro
+          %td $200
+          %td 
+            %a.button.radius.small.success{:href => '#'} Accept

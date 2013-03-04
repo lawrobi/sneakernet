@@ -2,6 +2,7 @@ class Sneakernet.Views.SingleErrand extends Backbone.View
 
   initialize: ->
     @model = new Sneakernet.Models.Errand {id:@options.errand_id}
+    @model.url = "/api/errands/#{@options.errand_id}"
     @model.on 'change', @render, @
     @model.fetch()
 

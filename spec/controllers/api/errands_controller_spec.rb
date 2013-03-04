@@ -34,15 +34,18 @@ describe Api::ErrandsController do
   end
 
   describe "POST create" do
-    it "creates a new errand" do
+    it "creates a new errand and calculates errand distance" do
       sign_in FactoryGirl.create(:user)
       from = FactoryGirl.create(:place)
       to = FactoryGirl.create(:place)
+      Geocoder.should_receive(:coordinates).twice.and_return(
+                             [39.011902, -98.4842465],[35.5174913, -86.5804473])
       post :create, {:errand => {:source_place_id => from.id,
                                  :arrival_place_id => to.id }}
       e = JSON.parse(response.body)
       e["source_place_id"].should == from.id
       e["arrival_place_id"].should == to.id
+      e["distance"].should == 697
       from.errands_departing.first.id.should == e["id"]
       to.errands_arriving.first.id.should == e["id"]
     end

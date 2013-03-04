@@ -14,6 +14,10 @@ class Api::ErrandsController < ApplicationController
   def create
     @errand = Errand.new(params[:errand])
     @errand.requester_id = current_user.id
+    from_coords = Geocoder.coordinates(@errand.source_place.display_name)
+    to_coords = Geocoder.coordinates(@errand.arrival_place.display_name)
+    @errand.distance = Geocoder::Calculations.distance_between(to_coords,
+                                                               from_coords)
     @errand.save!
     render json: @errand.to_json(include_hash)
   end

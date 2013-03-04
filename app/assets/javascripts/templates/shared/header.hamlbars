@@ -14,6 +14,7 @@
       %li
         {{#if current_user}}
         %a{:href => '#'}
+          %img{:src => "{{current_user.image_url}}"}
           {{current_user.name}}
         {{else}}
         %a.login-link.button.small.success.radius{"data-reveal-id" => "loginModal", :href => "#"}

@@ -19,4 +19,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :bios
   attr_accessible :home_place_id, :name, :email, :password, :password_confirmation, :image_url
 
+  def large_image
+    image_url.sub("type=square","type=large")
+  end
 end

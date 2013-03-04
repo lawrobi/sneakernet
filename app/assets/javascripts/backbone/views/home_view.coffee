@@ -5,8 +5,8 @@ class Sneakernet.Views.HomeView extends Backbone.View
     @errand_form = $("form[name='errand_new']")
     @render()
     @errand = JSON.parse($.cookie("errand_ready"))
-    if @errand
-      #go to create create
+    #if @errand
+    #go to create create
 
     #temprory deletes cookie when launched
     setCookie("errand", null, 1)

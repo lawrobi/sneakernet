@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
            :foreign_key => :requester_id
   has_many :offers, :class_name => "Offer",
            :foreign_key => :courier_id
+  has_many :errand_offers_as_courier, :class_name => "ErrandOffer",
+           :foreign_key => :courier_id
   belongs_to :home_place, :class_name => "Place"
 
   # Setup accessible (or protected) attributes for your model

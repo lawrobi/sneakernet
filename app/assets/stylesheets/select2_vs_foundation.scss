@@ -6,6 +6,11 @@ input.select2-input {
   -transition: none;
 }
 
+.select2-container.select2-dropdown-open  .select2-choice,
+.select2-container .select2-choice {
+  border: none;
+}
+
 .pika-single {
   width: inherit;
   .is-selected .pika-button {

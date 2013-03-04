@@ -3,6 +3,7 @@ FactoryGirl.define do
     source_place
     arrival_place
     requester
+    estimated_price { 50 + rand(300)}
     distance { rand(5000) }
     size { ["envelope", "cookbook", "toaster", "microwave", "oven"].sample }
     summary { ["Documents, large envelop",

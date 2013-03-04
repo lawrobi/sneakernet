@@ -14,9 +14,13 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
 
     @current_form = 1
 
+    if not @errand.source_place
+      @errand.source_place = {}
+      @errand.source_place.display_name = "Ex.: New York"
+
     @render()
     select_city("#deliver_to", @errand.arrival_place.display_name)
-    select_city("#deliver_from")
+    select_city("#deliver_from", @errand.source_place.display_name)
     @switch_form()
 
 

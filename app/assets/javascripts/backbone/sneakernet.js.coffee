@@ -75,4 +75,6 @@ window.select_city = (obj, name) ->
 
 
   if name
-    $("#s2id_deliver_to .select2-choice span").text(name)
+    display_name_class = "#s2id_#{obj[1..obj.length]} .select2-choice span"
+    console.log display_name_class
+    $(display_name_class).text(name)

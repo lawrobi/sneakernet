@@ -1,7 +1,6 @@
 .intro.home
   .row
-    %h2 Get Your Stuff Delivered
-    %h3 Our reliable delivery people will transport your packages at affordable rates
+    %h2 Get your packages delivered quickly and reliably at a fraction of the cost!
 
 .form.initial
   .row

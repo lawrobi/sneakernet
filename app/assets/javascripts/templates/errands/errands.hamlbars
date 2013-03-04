@@ -2,15 +2,17 @@
   .row
 .row.pane.first
   %h2
-    You might be traveling from
+    You might be traveling
     %br/
+    from
     %span.faux-input
       San Francisco
       //%input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_from'}
     to 
     %span.faux-input
-      New York
+      Anywhere
       //%input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_to'}
+  %h3 Care to deliver some stuff?
 
 .row.pane.errands-list
   %table

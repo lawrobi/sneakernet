@@ -16,6 +16,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
 
     @render()
     select_city("#deliver_to", @errand.arrival_place.display_name)
+    select_city("#deliver_from")
     @switch_form()
 
 

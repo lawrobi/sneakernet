@@ -1,1 +1,3 @@
 %h5 Errand
+{{summary}}
+{{arrival_place.display_name}}

@@ -1,0 +1,15 @@
+%h1 Review Your Request
+
+title: {{errand.summary}}
+from: {{errand.source_place.display_name}}
+to: {{errand.arrival_place.display_name}}
+Deliver by Date: {{errand.deadline}}
+Suggested Amount:
+
+%br
+{{errand.arrival_place.display_name}}
+
+
+
+.button.secondary.submit
+  Hahaha Submit

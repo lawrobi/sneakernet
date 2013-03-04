@@ -32,9 +32,10 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
       errand[field_name] = $(f).val() if field_name
     # if current user
     if window.current_user
-      alert window.current_user.name
-      collection = new Sneakernet.Collections.Errands()
-      collection.create(errand)
+      $.cookie("errand_ready", JSON.stringify(errand), 1)
+      Sneakernet.router.navigate("summary", {trigger:true})
+      #collection = new Sneakernet.Collections.Errands()
+      #collection.create(errand)
     else
       # if not
       $.cookie("errand_ready", JSON.stringify(errand), 1)

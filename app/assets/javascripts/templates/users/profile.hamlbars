@@ -4,7 +4,7 @@
   .user-header
     .columns.large-6
       .user-photo
-        %img{:src => '{{image_url}}'}
+        %img{:src => '{{large_image_url}}'}
       .name-and-stats
         %h2
           {{name}}

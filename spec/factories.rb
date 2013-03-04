@@ -5,6 +5,23 @@ FactoryGirl.define do
     requester
     distance { rand(5000) }
     size { ["envelope", "cookbook", "toaster", "microwave", "oven"].sample }
+    summary { ["Documents, large envelop",
+               "plazma TV panel",
+               "USB flash card with secret data", "Bottle of wine",
+               "Candlesticks",
+               "Tea set, flatware",
+               "20 T-shirts",
+               "Spare tire",
+               "A box of organic apples",
+               "6 pack of Bud light",
+               "Keys",
+               "Organic milk 3 boxes",
+               "Bottle of rum",
+               "Collectable posters",
+               "Box of cigars",
+               "2 cats",
+               "A dog",
+               "Samples"].sample }
   end
 
   factory :errand_offer do
@@ -17,6 +34,23 @@ FactoryGirl.define do
     arrival_place
     courier
     size { ["envelope", "cookbook", "toaster", "microwave", "oven"].sample }
+    summary { ["Documents, large envelop",
+               "plazma TV panel",
+               "USB flash card with secret data", "Bottle of wine",
+               "Candlesticks",
+                "Tea set, flatware",
+                "20 T-shirts",
+                "Spare tire",
+                "A box of organic apples",
+                "6 pack of Bud light",
+                "Keys",
+                "Organic milk 3 boxes",
+                "Bottle of rum",
+                "Collectable posters",
+                "Box of cigars",
+                "2 cats",
+                "A dog",
+                "Samples"].sample }
   end
 
   factory :message do

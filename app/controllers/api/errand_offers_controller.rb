@@ -29,14 +29,14 @@ class Api::ErrandOffersController < ApplicationController
     @errand_offer = ErrandOffer.new(params[:errand_offer])
     @errand_offer.courier_id = current_user.id
     @errand_offer.save!
-    render json: @errand_offer.to_json
+    render json: @errand_offer.to_json(include_hash)
   end
 
   def update
     @errand_offer = ErrandOffer.find(params[:id])
     if @errand_offer.courier_id = current_user.id
       if @errand_offer.update_attributes(params[:errand_offer])
-        render json: @errand_offer.to_json
+        render json: @errand_offer.to_json(include_hash)
       else
         head :no_content
       end
@@ -51,7 +51,7 @@ class Api::ErrandOffersController < ApplicationController
 
   def show
     @errand_offer = ErrandOffer.find(params[:id])
-    render json: @errand_offer.to_json
+    render json: @errand_offer.to_json(include_hash)
   end
 
 private

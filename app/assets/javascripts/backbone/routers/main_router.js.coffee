@@ -26,7 +26,6 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
     select_city("#deliver_to", default_destination.display_name)
     select_city("#deliver_from", default_source.display_name)
 
-
   request: ->
     @view = new Sneakernet.Views.ErrandForms({el:"#content"})
 

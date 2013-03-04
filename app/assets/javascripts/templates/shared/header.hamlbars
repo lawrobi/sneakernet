@@ -2,7 +2,7 @@
   %ul.title-area
     %li.name
       %h1
-        %a.link{:href => '/_=_'}
+        %a{:href => '/'}
           %img{:src => '/assets/site-logo.png', :title => '{{sitename}}'}
 
   %section.top-bar-section

@@ -18,6 +18,7 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
     'summary':'summary'
     'errands':'errands'
     'request':'request'
+    'dashboard':'dashboard'
     '_=_':'main'
 
   main: ->
@@ -31,6 +32,9 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
 
   summary: ->
     @view = new Sneakernet.Views.ErrandSummary({el:"#content"})
+
+  dashboard: ->
+    @view = new Sneakernet.Views.Dashboard({el:"#content"})
 
   profile: (id) ->
     @view = new Sneakernet.Views.Profile

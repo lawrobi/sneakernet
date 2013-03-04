@@ -1,0 +1,9 @@
+.intro
+  .row
+.row.pane.first
+  %h2
+    Dashboard it is
+.row.pane.errands-list
+
+
+  #requested_errands

@@ -377,6 +377,12 @@ table {
         color: #777;
         font-size: 14px;
         font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        .open {
+          color: #31a01d;
+        }
+        .in-transit {
+          color: #ff6c00;
+        }
       }
     }
     .subline {

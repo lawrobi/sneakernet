@@ -4,10 +4,10 @@
       I might be travelling from
       %br/
       %span.faux-input
-        San Francisco
+        %input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_from'}
       to 
       %span.faux-input
-        Anywhere
+        %input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_to'}
 
 .row
   .errands-list

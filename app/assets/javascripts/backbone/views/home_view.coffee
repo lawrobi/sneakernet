@@ -21,9 +21,9 @@ class Sneakernet.Views.HomeView extends Backbone.View
   request: (e) ->
     e.preventDefault()
     errand = {}
-    errand.arrival_place = {}
     errand.deadline = $("#errand_deadline").val()
     errand.arrival_place_id = $("#deliver_to").val()
+    errand.arrival_place = {}
     errand.arrival_place.display_name = $("#s2id_deliver_to .select2-choice span").text()
     $.cookie("errand", JSON.stringify(errand), 1)
     Sneakernet.router.navigate("request", {trigger:true})

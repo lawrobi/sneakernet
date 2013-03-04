@@ -35,6 +35,11 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
     $.each fields, (n, f) ->
       field_name = $(f).attr('data-field')
       errand[field_name] = $(f).val() if field_name
+    errand.arrival_place = {}
+    errand.source_place = {}
+    errand.arrival_place.display_name = $("#s2id_deliver_to .select2-choice span").text()
+    errand.source_place.display_name = $("#s2id_deliver_from .select2-choice span").text()
+
     # if current user
     if window.current_user
       $.cookie("errand_ready", JSON.stringify(errand), 1)

@@ -16,6 +16,11 @@
     Suggested price:
     %b ${{estimated_price}}
   .actions
-    %a.button.small.success.radius{:href => '#'} Complete
+    {{#if pending}}
+    %a.button.small.success.radius.complete-request{:href => '#'} Complete
     %a.button.tiny.secondary.radius{:href => '#'} Cancel
+    {{/if}}
 
+    {{#if completed}}
+    Done
+    {{/if}}

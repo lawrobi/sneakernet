@@ -5,3 +5,4 @@ class Sneakernet.Collections.Errands extends Backbone.Collection
   initialize: ->
   comparator: (errand) ->
     errand.get "deadline"
+

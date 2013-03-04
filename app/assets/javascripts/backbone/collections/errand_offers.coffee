@@ -5,3 +5,4 @@ class Sneakernet.Collections.ErrandOffers extends Backbone.Collection
   initialize: ->
   comparator: (errand) ->
     errand.get "leaving_at"
+

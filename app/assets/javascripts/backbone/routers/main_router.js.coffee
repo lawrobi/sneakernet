@@ -13,6 +13,7 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
     '': 'main'
     'about':'about'
     'static/:page':'static'
+    'users/:id':'profile'
     'summary':'summary'
     'errands':'errands'
     'request':'request'
@@ -29,6 +30,11 @@ class Sneakernet.Routers.MainsRouter extends Backbone.Router
 
   summary: ->
     @view = new Sneakernet.Views.ErrandSummary({el:"#content"})
+
+  profile: (id) ->
+    @view = new Sneakernet.Views.Profile
+      el:"#content"
+      user_id:id
 
   errands: ->
     @errands = new Sneakernet.Collections.Errands()

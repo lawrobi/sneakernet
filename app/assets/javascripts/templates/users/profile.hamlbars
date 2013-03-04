@@ -16,3 +16,10 @@
       %p.location
         Resides in San Francisco, CA
       %p World traveler and likes to help people when I can. The name is Chain, not Jackie Chan. I have many frequent flyer miles and etc.
+      {{format_date created_at}}
+      {{email}}
+      {{home_place_id}}
+      {{image_url}}
+      {{timeAgo last_sign_in_at}}
+      {{name}}
+      {{sign_in_count}}

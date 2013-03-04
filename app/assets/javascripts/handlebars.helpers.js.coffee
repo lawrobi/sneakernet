@@ -28,4 +28,6 @@ Handlebars.registerHelper "format_date", (date) ->
 Handlebars.registerHelper "link_to", (type, obj) ->
   "/#{type}/#{obj.id}"
 
-
+Handlebars.registerHelper "timeAgo", (date) ->
+  date = moment(date)
+  date.fromNow()

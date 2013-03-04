@@ -19,7 +19,7 @@
         %a.link{:href => '/dashboard'}
           Dashboard
       %li.usermeta
-        %a.link{:href => "/dashboard"}
+        %a.link{:href => "{{current_user_url}}"}
           %img{:src => "{{current_user.image_url}}"}
           {{current_user.name}}
       {{else}}

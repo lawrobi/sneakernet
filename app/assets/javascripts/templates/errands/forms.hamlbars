@@ -92,14 +92,14 @@
               You want your item of roughly horse size, weighing less than 10 lbs, delivered 2100 miles by
               %b#selected-date March 11, 2013
             .columns.large-5
-              #amount.price.large $250.00
+              #amount.price.large $150.00
               %p.note
                 Suggested Price. Final price will be agreed between you and the bidder.
             .columns.large-7
               .slider
                 #date-slider
-                .date.start 3/11
-                .date.end 4/1
+                .date.start 3/4
+                .date.end 4/15
                 %a.how{:href => '#'}
                   How is this estimated?
           .row.text-center

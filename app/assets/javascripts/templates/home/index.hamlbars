@@ -38,7 +38,7 @@
     .columns.large-8.text-right
       %h3 How Does It Work?
       %p
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+        {{sitename}} posts your delivery request to a large group of background-checked delivery professionals who bid for your job. These professionals are individuals who may already frequently travel between your package’s origin and destination on a regular basis and could help you out along the way!
       %p
         %a.link{:href => '/about'} Read more in About &#8594;
     .columns.large-4

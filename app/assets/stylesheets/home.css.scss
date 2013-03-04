@@ -1,3 +1,5 @@
+@import "variables";
+
 /****************************************
 /* Mixins
 /****************************************/
@@ -25,11 +27,6 @@
 /****************************************
 /* /Mixins
 /****************************************/
-
-$highlight-color: #7d2222;
-$light-color: #c5d5d0;
-$light-color-2: #bfddd5;
-$dark-color: #222;
 
 body {
   font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, serif;

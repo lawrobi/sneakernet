@@ -8,6 +8,7 @@ class Sneakernet.Views.HomeView extends Backbone.View
     #if @errand
     #go to create create
 
+    $('input#errand_deadline').pikaday({format: 'M/D/YYYY'})
     #temprory deletes cookie when launched
     setCookie("errand", null, 1)
 

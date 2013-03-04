@@ -16,7 +16,7 @@
             .flabel by
           .large-2.columns
             %label Date
-            %input#errand_deadline{:name => 'errand[deadline]', :placeholder => "{{tomorrow}}", :type => "text"}/
+            %input#errand_deadline{:name => 'errand[deadline]', :value => "{{tomorrow}}", :placeholder => "{{tomorrow}}", :type => "text"}/
           .large-3.columns
             .row.collapse
               %a.button.success.radius.continue{:href => '#'}

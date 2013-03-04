@@ -28,6 +28,7 @@ class Sneakernet.Views.ErrandForms extends Backbone.View
 
 
     @render()
+    $("input[data-field='deadline']").pikaday({format: 'M/D/YYYY'})
     $("#date-slider").slider
       value: 21
       min: 0

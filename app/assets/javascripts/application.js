@@ -22,6 +22,7 @@
 //= require backbone_datalink
 //= require handlebars.runtime
 //= require backbone/sneakernet
+//= require pikaday.jquery
 //= require_tree .
 
 $(document).foundation();

@@ -25,6 +25,7 @@ $light-gray: #e3e3e3;
 $dark-color: #222;
 
 body {
+  font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, serif;
 }
 
 .row.full-width {
@@ -34,8 +35,10 @@ body {
   text-align: center;
 }
 
-h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Droid Serif', "Helvetica Neue", "Helvetica", Helvetica, Arial, serif;
   font-style: oblique;
+  line-height: 1.2;
   @include white-text-shadow();
 }
 ul, ol {
@@ -90,6 +93,7 @@ ul, ol {
   fieldset {
     padding: 0;
     border: 0;
+    margin: 40px 0 0;
   }
   .flabel {
     text-align: center;
@@ -158,10 +162,58 @@ form {
   }
 }
 .faux-input {
-  padding: 0 5px;
+  padding: 0 15px;
   background-color: $dark-color;
   color: #fff;
   text-shadow: none;
+  display: inline-block;
+}
+.errands-list {
+  table {
+    width: 100%;
+    border: none;
+    background: none;
+    margin-top: 30px;
+    thead,
+    tbody {
+      background: none;
+    }
+    thead {
+      th {
+        border-bottom: 3px solid $dark-color;        
+        span {
+          color: #750205;
+        }
+        &:first-child {
+          width: 60%;
+        }
+      }
+    }
+    td, th {
+      vertical-align: top;
+      p {
+        margin: 0 0 5px;
+        line-height: 1.1;
+      }
+      .title {
+        font-size: 16px;
+      }
+      .subline {
+        color: #888;
+      }
+    }
+    tbody {
+      tr:hover {
+        td {
+          background: #dbdbdb;
+          .subline {
+            color: #555;
+          }
+
+        }
+      }
+    }
+  }
 }
 
 #footer {
@@ -182,8 +234,14 @@ form {
 
 .forms {
   display: none;
-  padding: 40px 0;
+  padding: 0 0 40px;
   background-color: #ababab;
+  .price {
+    font-weight: 700;
+    &.large {
+      font-size: 64px;
+    }
+  }
 }
 
 /****************************************
@@ -263,6 +321,15 @@ textarea {
         }
       }
     }
+  }
+}
+table {
+  tr {
+    &.even,
+    &.alt,
+    &:nth-of-type(even) {
+      background: inherit;
+    }   
   }
 }
 

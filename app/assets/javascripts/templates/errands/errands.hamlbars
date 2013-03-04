@@ -1,12 +1,90 @@
 .intro
   .row
     %h2
-      I will be travelling from
+      I might be travelling from
+      %br/
       %span.faux-input
         San Francisco
-      to
+      to 
       %span.faux-input
         Anywhere
 
 .row
   .errands-list
+    %table
+      %thead
+        %tr
+          %th
+            Errands Request Ending Soon
+            %span (3)
+          %th
+            Package Size
+          %th
+            By Date
+          %th
+            Reward
+      %tbody
+        %tr
+          %td
+            %p.title Crab Restaurant Tshirt
+            %p.subline San Francisco, CA to Chicago, IL
+          %td Large
+          %td Mar 15
+          %td $250
+        %tr
+          %td
+            %p.title Crab Restaurant Tshirt
+            %p.subline San Francisco, CA to Chicago, IL
+          %td Large
+          %td Mar 15
+          %td $250
+        %tr
+          %td
+            %p.title Crab Restaurant Tshirt
+            %p.subline San Francisco, CA to Chicago, IL
+          %td Large
+          %td Mar 15
+          %td $250
+          .row
+  .errands-list
+    %table
+      %thead
+        %tr
+          %th
+            Latest Requests
+            %span (73)
+          %th
+            Package Size
+          %th
+            By Date
+          %th
+            Reward
+      %tbody
+        %tr
+          %td
+            %p.title Motherboard from Santa Clara Microcenter
+            %p.subline Santa Clara, CA to New York, NY
+          %td Large
+          %td Mar 15
+          %td $250
+        %tr
+          %td
+            %p.title Crab Restaurant Tshirt
+            %p.subline San Francisco, CA to Chicago, IL
+          %td Large
+          %td Mar 15
+          %td $250
+        %tr
+          %td
+            %p.title Crab Restaurant Tshirt
+            %p.subline San Francisco, CA to Chicago, IL
+          %td Large
+          %td Mar 15
+          %td $250
+          %tr
+        %td
+          %p.title Motherboard from Santa Clara Microcenter
+          %p.subline Santa Clara, CA to New York, NY
+        %td Large
+        %td Mar 15
+        %td $250

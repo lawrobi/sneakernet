@@ -9,7 +9,7 @@ class Sneakernet.Views.AcceptedErrands extends Backbone.View
   #@render()
 
   addOne: (errand) ->
-    view = new Sneakernet.Views.RequestedErrand(model: errand)
+    view = new Sneakernet.Views.AcceptedErrand(model: errand)
     @$el.find(".errands-view").append view.render().el
 
   render: ->

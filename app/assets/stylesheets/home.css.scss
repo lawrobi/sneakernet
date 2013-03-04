@@ -100,9 +100,9 @@ ul, ol {
   padding: 60px 0;
   margin: 0 0;
   min-height: 200px;
-  background: url("/assets/bg-city.jpg") center -180px;
+  background: #FFF5D5 url("/assets/bg-city.jpg") center -180px;
   &.home {
-    background-position: center -50px;
+    background-position: center 0;
     min-height: 450px;
   }
   h2 {

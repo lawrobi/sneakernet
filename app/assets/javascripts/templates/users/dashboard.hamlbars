@@ -1,10 +1,22 @@
-.intro
-  .row
-.row.pane.first
-  %h2
-    Dashboard it is
-.row.pane.errands-list
+.dashboard-view
+  .intro
+    .row
+  .row.pane.first
+    %h2
+      All Your Requests &amp; Offers
 
-
-  #requested_errands
-  #accepted_errands
+  .row.pane.errands-list
+    .columns.large-12
+      %nav.row
+        .columns.large-4
+          .tab-pill.selected
+            Your Delivery Requests (1)
+        .columns.large-4
+          .tab-pill
+            Your Jobs (2)
+        .columns.large-4 &nbsp;
+      .row
+        .requested-errands-section
+          #requested_errands
+        .accepted-errands-section
+          #accepted_errands

@@ -1,11 +1,11 @@
-%h2
-  Your Errands Requested
+%h3
+  Errands You've Requested
 %table
   %thead
     %tr
       %th
-        Errand Requests Ending Soon
-        %span (3)
+        Errand Description
+        %span ({{l}})
       %th
         Package Size
       %th

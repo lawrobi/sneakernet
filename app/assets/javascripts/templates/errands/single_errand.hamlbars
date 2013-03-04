@@ -4,13 +4,20 @@
 
   %h2 {{summary}}
 
-  %p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
-  %p {{format_date deadline}}
-  %p $250
+  %p From {{source_place.display_name}} to {{arrival_place.display_name}}
+  %p Desired delivery date: {{format_date deadline}}
+  %p Estimated price: {{estimated_price}}
 
   .row
     .columns.large-4
       %h3 Bid of $200.00
     .columns.large-8
-      %a.button.radius.success{:href => '#'} Accept Request
+      %a.button.radius.success{"data-reveal-id" => "acceptRequestModal", :href => '#'} Accept Request
 
+#acceptRequestModal.reveal-modal.large
+  %h2.text-center You are about to accept a delivery request!
+  .row.login-options.text-center
+    %h5.lead By cofirming you commit to provide a timely delivery service.
+    %hr/
+    %a.link.button.radius{:href => '/dashboard'} I'll take it!
+  %a.close-reveal-modal &#215;

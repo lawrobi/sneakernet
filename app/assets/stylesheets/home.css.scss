@@ -314,6 +314,46 @@ form {
   }
 }
 
+/****************************************
+/* Dashboard
+/****************************************/
+
+.dashboard-view {
+  .pane {
+    padding-top: 40px;
+    &.first {
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+  nav {
+    padding-bottom: 30px;
+  }
+}
+.tab-pill {
+  background: #f0f0f0;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: $dark-color;
+  @include border-radius(5px);
+  &.selected {
+    background: $dark-color;
+    color: #fff;
+  }
+}
+
+/****************************************
+/* /Dashboard
+/****************************************/
+
+
+
+/****************************************
+/* Footer
+/****************************************/
+
 #footer {
   footer {
     padding: 10px 0;
@@ -329,6 +369,11 @@ form {
     }    
   }
 }
+
+/****************************************
+/* /Footer
+/****************************************/
+
 
 .forms {
   display: none;

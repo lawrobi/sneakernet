@@ -13,11 +13,11 @@ describe Api::PlacesController do
   describe "GET index" do
     it "can filter places by prefix search on display name, sorted by population" do
       FactoryGirl.create(:place, :display_name => "Petaluma, CA",
-                                 :population => 100)
+                         :country => "United States", :population => 100)
       FactoryGirl.create(:place, :display_name => "Pitsfield, MA",
-                                 :population => 1000)
+                         :country => "United States", :population => 1000)
       FactoryGirl.create(:place, :display_name => "Pittsburgh, PA",
-                                 :population => 10)
+                         :country => "United States", :population => 10)
       get :index, :q => "P"
       places = JSON.parse(response.body)
       places[0]["display_name"].should == "Pitsfield, MA"
@@ -30,6 +30,17 @@ describe Api::PlacesController do
       get :index, :q => "Pittsburgh, P"
       places = JSON.parse(response.body)
       places[0]["display_name"].should == "Pittsburgh, PA"
+    end
+
+    it "orders US cities before world cities" do
+      FactoryGirl.create(:place, :display_name => "Rome, NY",
+                         :country => "United States", :population => 100)
+      FactoryGirl.create(:place, :display_name => "Rome, Italy",
+                         :country => "Italy", :population => 1000)
+      get :index, :q => "Rome"
+      places = JSON.parse(response.body)
+      places[0]["display_name"].should == "Rome, NY"
+      places[1]["display_name"].should == "Rome, Italy"
     end
   end
 end

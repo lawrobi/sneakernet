@@ -4,22 +4,31 @@
   .user-header
     .columns.large-6
       .user-photo
-        
-      %h2
-        John Blargensen
-      .stats
-        %ul
-          %li Experience: Semi-Pro
-          %li Member since 1/11/2013
+        %img{:src => '{{image_url}}'}
+      .name-and-stats
+        %h2
+          {{name}}
+        .stats
+          %ul
+            %li
+              Experience:
+              %b Semi-Pro
+            %li
+              Member since:
+              %b {{format_date created_at}}
+            %li
+              Last seen:
+              %b {{timeAgo last_sign_in_at}}
+            %li
+              %a{:href => 'mailto:{{email}}'} Email address
+
     .columns.large-6
       .achievements &nbsp;
       %p.location
         Resides in San Francisco, CA
+        / {{home_place_id}}
       %p World traveler and likes to help people when I can. The name is Chain, not Jackie Chan. I have many frequent flyer miles and etc.
-      {{format_date created_at}}
-      {{email}}
-      {{home_place_id}}
-      {{image_url}}
-      {{timeAgo last_sign_in_at}}
-      {{name}}
-      {{sign_in_count}}
+      
+      / {{sign_in_count}}
+  .row
+    %hr/

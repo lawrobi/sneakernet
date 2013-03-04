@@ -8,7 +8,7 @@ class Api::ErrandsController < Api::ApplicationController
     if params[:arrival_place_id].present?
       @errands = @errands.where(:arrival_place_id => params[:arrival_place_id])
     end
-    @errands = @errands.limit(30)
+    @errands = @errands.order("deadline desc").limit(30)
     render json: @errands.to_json(include_hash)
   end
 

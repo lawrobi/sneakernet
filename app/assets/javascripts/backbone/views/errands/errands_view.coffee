@@ -36,7 +36,8 @@ class Sneakernet.Views.ErrandsView extends Backbone.View
     ($ ".errands-view").append view.render().el
 
   render: ->
-    json = {l: @collection.models.length}
+    json = {l: @collection.models.length, from:@errand.source_place_id, to:@errand.arrival_place_id}
+
     @$el.html HandlebarsTemplates['errands/errands'](json)
     select_city("#deliver_to", @errand.arrival_place.display_name)
     select_city("#deliver_from", @errand.source_place.display_name)

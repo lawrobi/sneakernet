@@ -6,10 +6,10 @@
     %br/
     from
     %span.faux-input
-      %input{:type => 'text', :placeholder => 'San Francisco', :id => 'deliver_from', :value => '{{default_source_id}}'}
+      %input{:type => 'text', :placeholder => 'San Francisco', :id => 'deliver_from', :value => '{{from}}'}
     to 
     %span.faux-input
-      %input{:type => 'text', :placeholder => 'San Francisco', :id => 'deliver_to', :value => '{{default_destination_id}}'}
+      %input{:type => 'text', :placeholder => 'San Francisco', :id => 'deliver_to', :value => '{{to}}'}
   %h3 Care to deliver some stuff?
 
 .row.pane.errands-list

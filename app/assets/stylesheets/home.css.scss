@@ -70,6 +70,41 @@ ul, ol {
     }
   }
 }
+.app-icon {
+  background: url('/assets/app-sprites.png');
+  display: inline-block;
+  &.size-xs {
+    width: 20px;
+    height: 14px;
+    background-position: 0px -130px;
+    margin-top: 46%;
+  }  
+  &.size-sm {
+    width: 44px;
+    height: 24px;
+    background-position: 0px -149px;
+    margin-top: 40%;
+  }  
+  &.size-md {
+    width: 40px;
+    height: 50px;
+    background-position: 0px -180px;
+    margin-top: 30%;
+  }  
+  &.size-lg {
+    width: 68px;
+    height: 57px;
+    background-position: 0px -240px;
+    margin-top: 25%;
+  }  
+  &.size-xl {
+    width: 73px;
+    height: 82px;
+    background-position: 0px -305px;
+    margin-top: 15%;
+  }  
+}
+
 
 #header {
   background: #333;
@@ -227,6 +262,7 @@ form {
   width: 120px;
   height: 120px; 
   background-color: #e2f2ec;
+  text-align: center;
   &.large {
     width: 180px;
     height: 180px;

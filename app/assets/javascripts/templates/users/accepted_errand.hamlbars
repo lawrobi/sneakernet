@@ -16,25 +16,3 @@
     Suggested price:
     %b ${{estimated_price}}
 
-  .bidders-list
-    %table
-      %thead
-        %tr
-          %th
-            Delivery Person's Name
-          %th Experience
-          %th Bid offer
-          %th Action
-      %tbody
-        %tr
-          %td Johnson Chen
-          %td Pro
-          %td $200
-          %td 
-            %a.button.radius.small.success{:href => '#'} Accept
-        %tr
-          %td Barbara Busch
-          %td Pro
-          %td $200
-          %td 
-            %a.button.radius.small.success{:href => '#'} Accept

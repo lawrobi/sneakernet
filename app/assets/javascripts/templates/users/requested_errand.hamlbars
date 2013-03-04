@@ -27,13 +27,18 @@
           %th Action
       %tbody
         %tr
-          %td Johnson Chen
+          %td
+            .user-photo
+              %img{:src => 'image_url'}
+            Johnson Chen
           %td Pro
           %td $200
           %td 
             %a.button.radius.small.success{:href => '#'} Accept
         %tr
-          %td Barbara Busch
+          %td
+            .user-photo
+            Barbara Busch
           %td Pro
           %td $200
           %td 

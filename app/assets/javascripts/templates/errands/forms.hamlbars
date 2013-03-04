@@ -5,7 +5,7 @@
 
     %fieldset.first
       .row.pane
-        %h2 Add more details to your item delivery request
+        %h2 Add details to your item delivery request
         .large-12.columns
           .row
             .large-9.columns
@@ -71,9 +71,8 @@
     %fieldset.first
       .row.pane
         .large-12.columns
-          .row.top-heading-box
-            %h2
-              Origin Location and Delivery Price Quote
+          .row
+            %h2 Specify Item Location
           .row
             .large-12.columns
               %label Street Address
@@ -86,6 +85,8 @@
               %label Zip Code
               %input{:name => '', :placeholder => "94101", :type => "text", 'data-field' => 'postal_code'}/
 
+          .row.middle-heading-box
+            %h2 Estimate Delivery Price
           .row.price-est-section
             %p
               You want your item of roughly horse size, weighing less than 10 lbs, delivered 2100 miles by

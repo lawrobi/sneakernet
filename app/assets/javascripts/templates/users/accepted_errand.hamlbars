@@ -1,9 +1,40 @@
-%td
-  %a.link{:href => "{{link_to 'errands' this}}"}
-    %p.title {{summary}}
-    %p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
-%td {{size}}
-%td
-  {{format_date deadline}}
-%td $250
+%li
+  %h4.title
+    %span.status Open for bidding
+    %a.link{:href => "{{link_to 'errands' this}}"} {{summary}}
+  %p.subline
+    From
+    %b {{source_place.display_name}}
+    to
+    %b {{arrival_place.display_name}} &#47;
+    Deliver by
+    %b {{format_date deadline}}
+    &#47;
+    Size:
+    %b {{size}}
+    &#47;
+    Suggested price:
+    %b ${{estimated_price}}
 
+  .bidders-list
+    %table
+      %thead
+        %tr
+          %th
+            Delivery Person's Name
+          %th Experience
+          %th Bid offer
+          %th Action
+      %tbody
+        %tr
+          %td Johnson Chen
+          %td Pro
+          %td $200
+          %td 
+            %a.button.radius.small.success{:href => '#'} Accept
+        %tr
+          %td Barbara Busch
+          %td Pro
+          %td $200
+          %td 
+            %a.button.radius.small.success{:href => '#'} Accept

@@ -116,8 +116,13 @@ ul, ol {
     margin: 0;
   } 
 }
-.row.top-heading-box {
-  padding-bottom: 40px;
+.row {
+  &.top-heading-box {
+    padding-bottom: 40px;
+  }
+  &.middle-heading-box {
+    padding-top: 40px;
+  }
 }
 
 .form {
@@ -271,48 +276,49 @@ form {
   @include border-box();
   border-top: 1px dashed $light-color-2;
   min-height: 400px;
-  table {
-    width: 100%;
-    border: none;
+}
+table {
+  width: 100%;
+  border: none;
+  background: none;
+  margin-top: 30px;
+  thead,
+  tbody {
     background: none;
-    margin-top: 30px;
-    thead,
-    tbody {
-      background: none;
+  }
+  thead {
+    th {
+      border-bottom: 3px solid $dark-color;        
+      span {
+        color: #750205;
+      }
+      &:first-child {
+        width: 60%;
+      }
     }
-    thead {
-      th {
-        border-bottom: 3px solid $dark-color;        
-        span {
-          color: #750205;
+  }
+  td, th {
+    vertical-align: middle;
+    border-bottom: 1px dashed $light-color-2;
+    p {
+      margin: 0 0 5px;
+      line-height: 1.1;
+    }
+    .title {
+      font-size: 16px;
+    }
+    .subline {
+      color: #888;
+    }
+  }
+  tbody {
+    tr:hover {
+      td {
+        background: #dbdbdb;
+        .subline {
+          color: #555;
         }
-        &:first-child {
-          width: 60%;
-        }
-      }
-    }
-    td, th {
-      vertical-align: top;
-      p {
-        margin: 0 0 5px;
-        line-height: 1.1;
-      }
-      .title {
-        font-size: 16px;
-      }
-      .subline {
-        color: #888;
-      }
-    }
-    tbody {
-      tr:hover {
-        td {
-          background: #dbdbdb;
-          .subline {
-            color: #555;
-          }
 
-        }
       }
     }
   }
@@ -348,6 +354,37 @@ form {
     background: $dark-color;
     color: #fff;
     cursor: default;
+  }
+}
+.errands-view {
+  margin-top: 20px;
+  li {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    // border-bottom: 1px dashed $light-color-2;
+    p {
+      margin-bottom: 5px;
+    }
+    h4 {
+      font-style: normal;
+      margin: 0;
+      a {
+        color: $dark-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span.status {
+        color: #777;
+        font-size: 14px;
+        font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      }
+    }
+    .subline {
+      color: #999;
+    }
   }
 }
 
@@ -401,7 +438,6 @@ form {
     width: 70%;
   }
   .price-est-section {
-    padding-top: 40px;
     padding-bottom: 40px;
     .slider {
       position: relative;
@@ -447,10 +483,10 @@ form {
   .summary {
     margin-bottom: 40px;
     p {
-      font-family: 'Droid Serif', "Times New Roman", Georgia, sans-serif;
+      font-family: 'Droid Serif', "Times New Roman", Georgia, serif;
       font-weight: 700;
       span {
-        font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, serif;
+        font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
         font-weight: 300;
         display: inline-block;
         min-width: 20%;

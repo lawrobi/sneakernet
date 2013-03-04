@@ -4,4 +4,14 @@ class Errand < ActiveRecord::Base
   belongs_to :arrival_place, :class_name => "Place"
   belongs_to :requester, :class_name => "User"
   has_many :errand_offers
+
+  def status
+    if errand_offers.find {|eo| eo.status == "completed"}
+      "completed"
+    elsif errand_offers.find {|eo| eo.status == "accepted"}
+      "accepted"
+    else
+      "pending"
+    end
+  end
 end

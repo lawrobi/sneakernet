@@ -8,21 +8,15 @@ class Api::UsersController < ApplicationController
   end
 
   def requested_errands
-    @user = User.includes(:requested_errands => :errand_offers).find(params[:id])
-    render json: {:requested_errands_completed => @user.requested_errands_completed.as_json(:include => [:errand_offers => {:include => :courier}]), :requested_errands_pending => @user.requested_errands_pending.as_json(:include => [:errand_offers => {:include => :courier}])}
+    @user = User.includes(:requested_errands => {:errand_offers => :courier}).find(params[:id])
+    render json: @user.requested_errands.to_json(:methods => :status, :include => [:errand_offers => {:include => :courier}])
   end
 
   def accepted_errands
-    @user = User.includes(:errand_offers_as_courier).find(params[:id])
-    errands_completed = @user.errand_offers_completed.map {|eo| eo.errand}
-    errands_pending = @user.errand_offers_pending.map {|eo| eo.errand}
-    render json: {
-      :accepted_errands_completed =>
-        errands_completed.as_json(:include =>
-          [:requester, :errand_offers => {:include => :courier}]),
-      :accepted_errands_pending =>
-        errands_pending.as_json(:include =>
+    @user = User.includes(:errand_offers_as_courier => {:errand => :requester}).find(params[:id])
+    errands = @user.errand_offers_as_courier.map {|eo| eo.errand}
+    render json:
+        errands.to_json(:methods => :status, :include =>
           [:requester, :errand_offers => {:include => :courier}])
-    }
   end
 end

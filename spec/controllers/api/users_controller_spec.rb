@@ -36,10 +36,9 @@ describe Api::UsersController do
       pending_request = FactoryGirl.create(:errand, :requester => user)
       get :requested_errands, :id => user.id
       errands = JSON.parse(response.body)
-      errands["requested_errands_completed"].map {|e| e["id"] }.should ==
-        [completed_request.id]
-      errands["requested_errands_pending"].map {|e| e["id"] }.should ==
-        [pending_request.id]
+      errands.map {|e| e["id"] }.should ==
+        [completed_request.id, pending_request.id]
+      binding.pry
     end
   end
 
@@ -51,10 +50,9 @@ describe Api::UsersController do
                                           :status => "pending")
       get :accepted_errands, :id => user.id
       errands = JSON.parse(response.body)
-      errands["accepted_errands_completed"].map {|e| e["id"] }.should ==
-        [completed_errand.id]
-      errands["accepted_errands_pending"].map {|e| e["id"] }.should ==
-        [pending_errand.id]
+      errands.map {|e| e["id"] }.should =~
+        [completed_errand.id, pending_errand.id]
+      binding.pry
     end
   end
 end

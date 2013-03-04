@@ -3,6 +3,5 @@ class Errand < ActiveRecord::Base
   belongs_to :source_place, :class_name => "Place"
   belongs_to :arrival_place, :class_name => "Place"
   belongs_to :requester, :class_name => "User"
-  belongs_to :assignee, :class_name => "User"
   has_many :errand_offers
 end

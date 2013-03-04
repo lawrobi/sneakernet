@@ -1,5 +1,4 @@
-class Api::ErrandOffersController < ApplicationController
-  before_filter :authenticate_user!, :only => [:create, :update, :destroy]
+class Api::ErrandOffersController < Api::ApplicationController
 
   def index
     @errand_offers = ErrandOffer.joins(:errand)

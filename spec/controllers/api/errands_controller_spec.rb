@@ -34,10 +34,11 @@ describe Api::ErrandsController do
   end
 
   describe "POST create" do
+    let(:from) { FactoryGirl.create(:place) }
+    let(:to) { FactoryGirl.create(:place) }
+
     it "creates a new errand and calculates errand distance" do
       sign_in FactoryGirl.create(:user)
-      from = FactoryGirl.create(:place)
-      to = FactoryGirl.create(:place)
       Geocoder.should_receive(:coordinates).twice.and_return(
                              [39.011902, -98.4842465],[35.5174913, -86.5804473])
       post :create, {:errand => {:source_place_id => from.id,
@@ -48,6 +49,12 @@ describe Api::ErrandsController do
       e["distance"].should == 697
       from.errands_departing.first.id.should == e["id"]
       to.errands_arriving.first.id.should == e["id"]
+    end
+
+    it "fails when no user logged in" do
+      post :create, {:errand => {:source_place_id => from.id,
+                                 :arrival_place_id => to.id }}
+      response.status.should == 401
     end
   end
 
@@ -61,6 +68,11 @@ describe Api::ErrandsController do
       e["summary"].should == "Stewie"
       errand.reload.summary.should == "Stewie"
     end
+
+    it "fails when no user logged in" do
+      put :update, :id => errand.id, :errand => {:summary => "Stewie"}
+      response.status.should == 401
+    end
   end
 
   describe "DELETE destroy" do
@@ -69,6 +81,11 @@ describe Api::ErrandsController do
       delete :destroy, :id => errand.id
       response.should be_success
       Errand.find_by_id(errand.id).should be_nil
+    end
+
+    it "fails when no user logged in" do
+      delete :destroy, :id => errand.id
+      response.status.should == 401
     end
   end
 

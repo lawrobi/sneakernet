@@ -1,5 +1,4 @@
-class Api::ErrandsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:create, :update, :destroy]
+class Api::ErrandsController < Api::ApplicationController
 
   def index
     @errands = Errand.scoped

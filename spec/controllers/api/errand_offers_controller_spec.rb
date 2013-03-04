@@ -120,6 +120,11 @@ describe Api::ErrandOffersController do
       eo["errand_id"].should == errand.id
       eo["courier_id"].should == courier.id
     end
+
+    it "fails when no user logged in" do
+      post :create, {:errand_offer => {:errand_id => errand.id, :bid => 100 }}
+      response.status.should == 401
+    end
   end
 
   describe "PUT update" do
@@ -133,6 +138,12 @@ describe Api::ErrandOffersController do
       eo["message"].should == "Stewie"
       errand_offer.reload.message.should == "Stewie"
     end
+
+    it "fails when no user logged in" do
+      put :update, :id => errand_offer.id,
+                   :errand_offer => {:message => "Stewie"}
+      response.status.should == 401
+    end
   end
 
   describe "DELETE destroy" do
@@ -142,7 +153,13 @@ describe Api::ErrandOffersController do
       response.should be_success
       ErrandOffer.find_by_id(errand_offer.id).should be_nil
     end
+
+    it "fails when no user logged in" do
+      delete :destroy, :id => errand_offer.id
+      response.status.should == 401
+    end
   end
+
   describe "GET show" do
     it "fetches a single errand offer" do
       get :show, :id => errand_offer.id

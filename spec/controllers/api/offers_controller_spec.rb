@@ -34,10 +34,11 @@ describe Api::OffersController do
   end
 
   describe "POST create" do
+    let(:from) { FactoryGirl.create(:place) }
+    let(:to) { FactoryGirl.create(:place) }
+
     it "creates a new offer" do
       sign_in FactoryGirl.create(:user)
-      from = FactoryGirl.create(:place)
-      to = FactoryGirl.create(:place)
       post :create, {:offer => {:source_place_id => from.id,
                                  :arrival_place_id => to.id }}
       e = JSON.parse(response.body)
@@ -45,6 +46,12 @@ describe Api::OffersController do
       e["arrival_place_id"].should == to.id
       from.offers_departing.first.id.should == e["id"]
       to.offers_arriving.first.id.should == e["id"]
+    end
+
+    it "fails when no user logged in" do
+      post :create, {:offer => {:source_place_id => from.id,
+                                 :arrival_place_id => to.id }}
+      response.status.should == 401
     end
   end
 
@@ -58,6 +65,11 @@ describe Api::OffersController do
       e["summary"].should == "Stewie"
       offer.reload.summary.should == "Stewie"
     end
+
+    it "fails when no user logged in" do
+      put :update, :id => offer.id, :offer => {:summary => "Stewie"}
+      response.status.should == 401
+    end
   end
 
   describe "DELETE destroy" do
@@ -66,6 +78,11 @@ describe Api::OffersController do
       delete :destroy, :id => offer.id
       response.should be_success
       Errand.find_by_id(offer.id).should be_nil
+    end
+
+    it "fails when no user logged in" do
+      delete :destroy, :id => offer.id
+      response.status.should == 401
     end
   end
 

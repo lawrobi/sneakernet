@@ -1,5 +1,4 @@
-class Api::OffersController < ApplicationController
-  before_filter :authenticate_user!, :only => [:create, :update, :destroy]
+class Api::OffersController < Api::ApplicationController
 
   def index
     @offers = Offer.scoped

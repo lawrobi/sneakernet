@@ -1,0 +1,6 @@
+%h2 {{summary}}
+
+%p.subline {{source_place.display_name}} to {{arrival_place.display_name}}
+%p {{format_date deadline}}
+%p $250
+

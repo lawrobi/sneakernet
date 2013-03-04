@@ -15,6 +15,8 @@ class Sneakernet.Views.ErrandSummary extends Backbone.View
   submit: ->
     $('.show-success').trigger 'click'
     collection = new Sneakernet.Collections.Errands()
+    delete @errand.source_place
+    delete @errand.arrival_place
     collection.create(@errand)
 
   render: ->

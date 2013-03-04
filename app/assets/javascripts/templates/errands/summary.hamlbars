@@ -1,7 +1,9 @@
 .forms-section.form
   .intro
     .row
-      .columns.large-10
+  %fieldset.first
+    .row.pane
+      .columns.large-12
         .row.top-heading-box
           %h2
             Review Your Request

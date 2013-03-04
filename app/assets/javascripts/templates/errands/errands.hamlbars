@@ -1,28 +1,28 @@
 .intro
   .row
-    %h2
-      You might be travelling from
-      %br/
-      %span.faux-input
-        San Francisco
-        //%input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_from'}
-      to 
-      %span.faux-input
-        New York
-        //%input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_to'}
+.row.pane.first
+  %h2
+    You might be traveling from
+    %br/
+    %span.faux-input
+      San Francisco
+      //%input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_from'}
+    to 
+    %span.faux-input
+      New York
+      //%input{:type => 'text', :placeholder => 'San Francisco', :id => 'place_to'}
 
-.row
-  .errands-list
-    %table
-      %thead
-        %tr
-          %th
-            Errands Request Ending Soon
-            %span (3)
-          %th
-            Package Size
-          %th
-            By Date
-          %th
-            Reward
-      %tbody.errands-view
+.row.pane.errands-list
+  %table
+    %thead
+      %tr
+        %th
+          Errand Requests Ending Soon
+          %span (3)
+        %th
+          Package Size
+        %th
+          By Date
+        %th
+          Reward
+    %tbody.errands-view

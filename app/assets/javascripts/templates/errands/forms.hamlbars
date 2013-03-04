@@ -1,13 +1,12 @@
 %form#request_form.form.custom
   .forms.forms-section{'data-index' => '1'}
-
     .intro
       .row
-        %h2 Add more details to your item delivery request
 
-    %fieldset
-      .row
-        .large-10.columns
+    %fieldset.first
+      .row.pane
+        %h2 Add more details to your item delivery request
+        .large-12.columns
           .row
             .large-9.columns
               %label Item Name / Title 
@@ -67,36 +66,38 @@
 
   .forms.forms-section{'data-index' => '2'}
     .intro
-      %fieldset
-        .row
-          .large-10.columns
-            .row.top-heading-box
-              %h2
-                Origin Location and Delivery Price Quote
-            .row
-              .large-12.columns
-                %label Street Address
-                %input{:name => '', :placeholder => "Ex.: 123 Main St", :type => "text", 'data-field' => 'street_address'}/
-            .row
-              .large-9.columns
-                %label City
-                %input#deliver_from{:name => '', :placeholder => "", :type => "text", :value => "{{errand.source_place_id}}", 'data-field' => 'source_place_id'}/
-              .large-3.columns
-                %label Zip Code
-                %input{:name => '', :placeholder => "94101", :type => "text", 'data-field' => 'postal_code'}/
+      .row
 
-            .row.price-est-section
-              %p
-                You want your item of roughly horse size, weighing less than 10 lbs, delivered 2100 miles by
-                %b March 11, 2013
-              .columns.large-5
-                .price.large $250.00
-                %p.note
-                  Suggested Price. Final price will be agreed between you and the bidder.
-              .columns.large-7
-                .slider
-                  %a.how{:href => '#'}
-                    How is this estimated?
-            .row.text-center
-              %a.button.radius.submit_form Review Your Request
+    %fieldset.first
+      .row.pane
+        .large-12.columns
+          .row.top-heading-box
+            %h2
+              Origin Location and Delivery Price Quote
+          .row
+            .large-12.columns
+              %label Street Address
+              %input{:name => '', :placeholder => "Ex.: 123 Main St", :type => "text", 'data-field' => 'street_address'}/
+          .row
+            .large-9.columns
+              %label City
+              %input#deliver_from{:name => '', :placeholder => "", :type => "text", :value => "{{errand.source_place_id}}", 'data-field' => 'source_place_id'}/
+            .large-3.columns
+              %label Zip Code
+              %input{:name => '', :placeholder => "94101", :type => "text", 'data-field' => 'postal_code'}/
+
+          .row.price-est-section
+            %p
+              You want your item of roughly horse size, weighing less than 10 lbs, delivered 2100 miles by
+              %b March 11, 2013
+            .columns.large-5
+              .price.large $250.00
+              %p.note
+                Suggested Price. Final price will be agreed between you and the bidder.
+            .columns.large-7
+              .slider
+                %a.how{:href => '#'}
+                  How is this estimated?
+          .row.text-center
+            %a.button.radius.submit_form Review Your Request
 

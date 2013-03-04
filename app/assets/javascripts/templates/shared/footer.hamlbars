@@ -10,7 +10,7 @@
       %li
         %a.link{:href => "/about"} About
       %li
-        %a{:href => "#"} Blog
+        %a{:href => "#"} Terms
 
 #loginModal.reveal-modal.medium
   %h2.text-center Sign In

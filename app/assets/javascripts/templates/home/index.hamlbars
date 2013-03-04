@@ -1,7 +1,7 @@
 .intro.home
   .row
-    %h2 It's like Lyft for Courier Services
-    %h3 Get your stuff delivered in the US by reliable runners at affordable rates
+    %h2 Get Your Stuff Delivered
+    %h3 Our reliable delivery people will transport your packages at affordable rates
 
 .form.initial
   .row

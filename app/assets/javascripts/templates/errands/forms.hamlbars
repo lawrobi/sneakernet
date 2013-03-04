@@ -1,5 +1,5 @@
-%form#request_form.form
-  .forms{'data-index' => '1'}
+%form#request_form.form.custom
+  .forms.forms-section{'data-index' => '1'}
 
     .intro
       .row
@@ -50,9 +50,9 @@
             .columns.large-1
               &nbsp;
           .row
-            .large-3.columns
-              %label Approx. Weight
-              %select
+            .large-3.columns.custom
+              %label{:for => 'weightSelect'} Approx. Weight
+              %select#weightSelect.medium
                 %option Less than 1 lbs
                 %option Less than 5 lbs
                 %option Less than 10 lbs
@@ -61,12 +61,11 @@
             .large-9.columns
               %label Additional Notes
               %input{:name => '', :placeholder => "", :type => "text"}/
-          .row
-            .large-8.columns
-              %a.button.radius.next_form{:href => '#'}
-                Continue
+          .row.text-center
+            %a.button.radius.next_form{:href => '#'}
+              Continue
 
-  .forms{'data-index' => '2'}
+  .forms.forms-section{'data-index' => '2'}
     .intro
       .row
         .columns.large-10
@@ -86,20 +85,6 @@
               .slider
                 %a.how{:href => '#'}
                   How is this estimated?
-          .row
-            %h4.form-heading
-              %span User Agreement and Terms of Service
-            .agreement-box
-              %input{:type => 'checkbox', :checked => 'checked'}
-              %p
-                By checking the checkbox you agree with our terms of services. To ensure successful delivery we have comprehensive terms or service and urge you read them through. Your package will be ensured for up to USD 500,000. Read the
+          .row.text-center
+            %a.button.radius.submit_form Review Your Request
 
-    .row
-      .next_form
-        %a.button.radius Review Your Request
-
-  .forms{'data-index' => '3'}
-    .row
-      !
-      .submit_form
-        %a.button.radius Submit

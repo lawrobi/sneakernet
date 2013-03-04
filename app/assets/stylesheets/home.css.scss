@@ -31,8 +31,7 @@ p {
   line-height: 1.2;
 }
 a {
-  text-decoration: underline;
-  color: $dark-color;
+  color: $highlight-color;
 }
 .row.full-width {
   max-width: 100%;
@@ -42,7 +41,7 @@ a {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Droid Serif', "Helvetica Neue", "Helvetica", Helvetica, Arial, serif;
+  font-family: 'Droid Serif', "Times New Roman", Georgia, sans-serif;
   font-style: oblique;
   line-height: 1.2;
   @include white-text-shadow();
@@ -108,18 +107,6 @@ ul, ol {
     width: 100%;
     display: inline-block;
     margin-top: 38px;
-  }
-  .form-heading {
-    text-align: center;
-    border-top: 1px solid #777;
-    margin: 20px 0 -16px;
-    font-size: 20px;
-    span {
-      background-color: $light-gray;
-      position: relative;
-      top: -16px;
-      padding: 0 10px;
-    }
   }
 }
 .sizes {
@@ -242,6 +229,8 @@ form {
 
 .forms {
   display: none;
+}
+.forms-section {
   padding: 0 0 40px;
   .price {
     font-weight: 700;
@@ -280,6 +269,32 @@ form {
     p {
       font-size: 14px;
       margin-left: 40px;
+    }
+  }
+  .summary {
+    p {
+      font-family: 'Droid Serif', "Times New Roman", Georgia, sans-serif;
+      font-weight: 700;
+      span {
+        font-family: 'Droid Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, serif;
+        font-weight: 300;
+        display: inline-block;
+        min-width: 20%;
+        text-align: right;
+        margin-right: 20px;
+      }
+    }
+  }
+  .form-heading {
+    text-align: center;
+    border-top: 1px solid #777;
+    margin: 20px 0 -16px;
+    font-size: 20px;
+    span {
+      background-color: $light-gray;
+      position: relative;
+      top: -16px;
+      padding: 0 10px;
     }
   }
 }
@@ -349,6 +364,7 @@ textarea {
         a {
           font-size: 27px;
           font-style: oblique;
+          text-decoration: none;
         }
       }
     }

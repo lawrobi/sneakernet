@@ -1,15 +1,45 @@
-%h1 Review Your Request
+.forms-section.form
+  .intro
+    .row
+      .columns.large-10
+        .row.top-heading-box
+          %h2
+            Review Your Errand
 
-title: {{errand.summary}}
-from: {{errand.source_place.display_name}}
-to: {{errand.arrival_place.display_name}}
-Deliver by Date: {{errand.deadline}}
-Suggested Amount:
+        .row.summary
+          %p
+            %span Title:
+            {{errand.summary}}
+          %p
+            %span From:
+            {{errand.source_place.display_name}}
+          %p
+            %span To:
+            {{errand.arrival_place.display_name}}
+          %p
+            %span Deliver by Date:
+            {{errand.deadline}}
+          %p
+            %span Sugguested Amount:
+            $250.00
 
-%br
-{{errand.arrival_place.display_name}}
+        .row
+          %h4.form-heading
+            %span User Agreement and Terms of Service
+          .agreement-box
+            %input{:type => 'checkbox', :checked => 'checked'}
+            %p
+              By checking the checkbox you agree with our terms of services. To ensure successful delivery we have comprehensive terms or service and urge you read them through. Your package will be ensured for up to USD 500,000.
+              %a{:href => '#'} Read the terms here
 
+        .row.text-center
+          %a.button.radius.submit Submit Your Request
 
+/ title: {{errand.summary}}
+/ from: {{errand.source_place.display_name}}
+/ to: {{errand.arrival_place.display_name}}
+/ Deliver by Date: {{errand.deadline}}
+/ Suggested Amount:
 
-.button.secondary.submit
-  Hahaha Submit
+/ {{errand.arrival_place.display_name}}
+

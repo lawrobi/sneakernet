@@ -11,10 +11,10 @@
       %li.hide
         %a.link{:href => '/about'}
           About
-      %li.has-form
+      %li
         {{#if current_user}}
         %a{:href => '#'}
-          Logged in with: {{current_user.name}}
+          {{current_user.name}}
         {{else}}
         %a.login-link.button.small.success.radius{"data-reveal-id" => "loginModal", :href => "#"}
           Sign In

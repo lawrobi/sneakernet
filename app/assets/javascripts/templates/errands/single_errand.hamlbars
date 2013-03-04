@@ -19,5 +19,5 @@
   .row.login-options.text-center
     %h5.lead By cofirming you commit to provide a timely delivery service.
     %hr/
-    %a.link.button.radius{:href => '/dashboard'} I'll take it!
+    %a.link.button.radius.accept{:href => '/dashboard'} I'll take it!
   %a.close-reveal-modal &#215;
